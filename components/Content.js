@@ -7,6 +7,11 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
 export const Content = ({ children }) => {
   const { pathname } = useRouter()
 
+  const editLink = useMemo(() => {
+    const page = pathname.endsWith("/") ? pathname + "index" : pathname
+    return `https://github.com/fingcloud/docs/edit/main/pages${page}.mdx`
+  }, [pathname])
+
   const [prevPage, nextPage] = useMemo(() => {
     const sectionIndex = sidebarItems.findIndex(s => s.pages.find(p => p.slug === pathname))
     const pageIndex = sidebarItems[sectionIndex].pages.findIndex(p => p.slug === pathname)
@@ -70,6 +75,12 @@ export const Content = ({ children }) => {
             : <div />
           }
         </div>
+      </div>
+
+      <div className="flex items-center justify-start px-8 my-4">
+        <Link href={editLink} passHref>
+          <a className="text-sm text-gray-500 hover:text-indigo-600">این صفحه را در گیت‌هاب ویرایش کنید</a>
+        </Link>
       </div>
     </div>
   )
