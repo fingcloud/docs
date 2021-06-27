@@ -52,24 +52,17 @@ export const Content = ({ children }) => {
         <div className="flex items-center justify-between space-x-4 mb-8">
           {prevPage
             ? <Link href={prevPage.slug} passHref>
-              <a className="text-indigo-500 hover:text-indigo-600 block">
-                <div className="text-gray-700 text-sm mb-1 font-medium text-right">
-                  <FiArrowRight className="inline-block ml-2" />
-                  قبلی
-                </div>
-                <div className="font-medium text-lg">{prevPage.label}</div>
+              <a className="text-indigo-500 hover:text-indigo-600 hover:bg-indigo-100 block font-medium text-lg px-3 py-1 rounded-md transition-all duration-150">
+                <FiArrowRight className="inline-block ml-2" />
+                {prevPage.label}
               </a>
             </Link>
             : <div />
           }
           {nextPage
             ? <Link href={nextPage.slug} passHref>
-              <a className="text-indigo-500 hover:text-indigo-600 block">
-                <div className="text-gray-700 text-sm mb-1 font-medium text-left">
-                  بعدی
-                  <FiArrowLeft className="inline-block mr-2" />
-                </div>
-                <div className="font-medium text-lg">{nextPage.label}</div>
+              <a className="text-indigo-500 hover:text-indigo-600 hover:bg-indigo-100 block font-medium text-lg px-3 py-1 rounded-md transition-all duration-150">
+                {nextPage.label}<FiArrowLeft className="inline-block mr-2" />
               </a>
             </Link>
             : <div />
