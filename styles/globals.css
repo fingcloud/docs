@@ -1,1 +1,5 @@
 @import '/fonts/vazir-fd/font.css';
+
+body {
+  font-family: Vazir !important;
+}
