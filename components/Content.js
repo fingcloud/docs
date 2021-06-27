@@ -44,6 +44,7 @@ export const Content = ({ children }) => {
           <a className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-1.5 rounded transition-all duration-100">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
         </Link>
       </header>
+
       <main className="px-8">
         {children}
       </main>
@@ -52,8 +53,8 @@ export const Content = ({ children }) => {
         <div className="flex items-center justify-between space-x-4 mb-8">
           {prevPage
             ? <Link href={prevPage.slug} passHref>
-              <a className="text-indigo-500 hover:text-indigo-600 hover:bg-indigo-100 block font-medium text-lg px-3 py-1 rounded-md transition-all duration-150">
-                <FiArrowRight className="inline-block ml-2" />
+              <a className="text-indigo-500 hover:text-indigo-600 block font-medium text-lgrounded-md transition-all duration-150">
+                <div className="text-gray-600 text-sm text-right" ><FiArrowRight className="inline-block ml-2" size="18" />قبلی</div>
                 {prevPage.label}
               </a>
             </Link>
@@ -61,8 +62,9 @@ export const Content = ({ children }) => {
           }
           {nextPage
             ? <Link href={nextPage.slug} passHref>
-              <a className="text-indigo-500 hover:text-indigo-600 hover:bg-indigo-100 block font-medium text-lg px-3 py-1 rounded-md transition-all duration-150">
-                {nextPage.label}<FiArrowLeft className="inline-block mr-2" />
+              <a className="text-indigo-500 hover:text-indigo-600 block font-medium text-lgrounded-md transition-all duration-150">
+                <div className="text-gray-600 text-sm text-left" >بعدی<FiArrowLeft className="inline-block mr-2" size="18" /></div>
+                {nextPage.label}
               </a>
             </Link>
             : <div />
@@ -70,6 +72,7 @@ export const Content = ({ children }) => {
         </div>
       </div>
 
+      <hr className="mx-8" />
       <div className="flex items-center justify-start px-8 my-4">
         <Link href={editLink} passHref>
           <a className="text-sm text-gray-500 hover:text-indigo-600">این صفحه را در گیت‌هاب ویرایش کنید</a>
