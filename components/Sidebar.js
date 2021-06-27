@@ -10,7 +10,7 @@ export const Sidebar = () => {
       <div className="flex items-center justify-between px-4 py-6">
         <div className="flex items-center">
           <img src="https://fing.ir/images/icon.png" className="ml-4 w-8 h-8" alt="icon" />
-          <div className="text-gray-800 font-medium text-lg">فینگ</div>
+          <div className="text-gray-800 font-medium text-lg">مستندات فینگ</div>
         </div>
       </div>
 
