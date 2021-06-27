@@ -45,7 +45,7 @@ export const Content = ({ children }) => {
         </Link>
       </header>
 
-      <main className="px-8">
+      <main className="px-8 pb-8">
         {children}
       </main>
 
