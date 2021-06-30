@@ -6,7 +6,7 @@ export const Sidebar = () => {
   const router = useRouter()
 
   return (
-    <div className="border-l h-screen sticky top-0 overflow-hidden w-80 ">
+    <div className="border-l h-screen sticky top-0 overflow-y-auto w-80 ">
       <div className="flex items-center justify-between px-4 py-6">
         <div className="flex items-center">
           <img src="https://fing.ir/images/icon.png" className="ml-4 w-8 h-8" alt="icon" />
