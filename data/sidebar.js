@@ -3,7 +3,6 @@ export const sidebarItems = [
     title: 'اطلاعات کلی',
     pages: [
       { label: 'معرفی فینگ', slug: '/' },
-      { label: 'شروع کار', slug: '/getting-started' },
     ]
   },
   {
@@ -11,7 +10,7 @@ export const sidebarItems = [
     pages: [
       { label: 'نصب', slug: '/cli/installation' },
       { label: 'شروع سریع', slug: '/cli/quick-start' },
-      { label: 'دستورات', slug: '/cli/api-reference' },
+      { label: 'دستورات', slug: '/cli/commands' },
     ]
   },
   {
