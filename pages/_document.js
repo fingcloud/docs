@@ -1,4 +1,5 @@
 import NextDocument, { Head, Html, Main, NextScript } from "next/document"
+import Favicon from "components/Favicon"
 
 class Document extends NextDocument {
   static async getInitialProps(ctx) {
@@ -9,7 +10,9 @@ class Document extends NextDocument {
     // const dir = locale === "fa" ? "rtl" : "ltr"
     return (
       < Html dir={'rtl'} lang={'fa'} >
-        <Head />
+        <Head>
+          <Favicon />
+        </Head>
         <body >
           <Main />
           <NextScript />
