@@ -35,7 +35,7 @@ export const sidebarItems = [
   {
     title: 'متغیرها ENV',
     pages: [
-      { label: 'متغیرها', slug: '/environment-variables' },
+      { label: 'متغیرها', slug: '/env/environment-variables' },
     ]
   }
 ]
