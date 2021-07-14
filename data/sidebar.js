@@ -2,7 +2,7 @@ export const sidebarItems = [
   {
     title: 'اطلاعات کلی',
     pages: [
-      { label: 'معرفی فینگ', slug: '/' },
+      { label: 'معرفی فینگ', slug: '/introduction' },
     ]
   },
   {
@@ -13,12 +13,12 @@ export const sidebarItems = [
       { label: 'دستورات', slug: '/cli/commands' },
     ]
   },
-  {
-    title: 'Git',
-    pages: [
-      { label: 'گیت ‌هاب', slug: '/git/fing-github' } 
-    ]
-  },
+  // {
+  //   title: 'Git',
+  //   pages: [
+  //     { label: 'گیت ‌هاب', slug: '/git/fing-github' } 
+  //   ]
+  // },
   {
     title: 'دامنه‌ها',
     pages: [
@@ -36,6 +36,12 @@ export const sidebarItems = [
     title: 'متغیرها ENV',
     pages: [
       { label: 'متغیرها', slug: '/env/environment-variables' },
+    ]
+  },
+  {
+    title: 'لاگ‌ها',
+    pages:[
+      {label:'لاگ‌ها', slug:'/logs'},
     ]
   }
 ]
