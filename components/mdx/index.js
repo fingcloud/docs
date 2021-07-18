@@ -1,5 +1,6 @@
 import { H1, H2, H3, H4, H5, H6 } from 'components/mdx/Heading'
 import { Code } from './Code'
+import { Image } from './Image'
 import { Inline } from './Inline'
 import { List, ListItem, OrderedList } from './List'
 import { Link, Paragraph } from './Text'
@@ -18,4 +19,5 @@ export const components = {
   inlineCode: Inline,
   a: Link,
   code: Code,
+  img: Image,
 }
