@@ -2,7 +2,7 @@
 title: متغیرها
 ---
 
-import { Notice } from "components/Notice";
+import { Notice } from 'components/Notice';
 
 # متغیرها
 
@@ -16,62 +16,44 @@ import { Notice } from "components/Notice";
 
 از قسمت [داشبورد](https://dashboard.fing.ir)، برنامه‌ای که می خواهید متغیر‌های محلی برای آن تعریف کنید را انتخاب کنید.
 
-<img src="/images/choose-app.jpg" class="border border-dark rounded" />
+![choose app](/images/choose-app.jpg)
 
 ##### قدم دوم: رفتن به متغیرها
 
 بعد از انتخاب برنامه مورد نظر، گزینه‌ی ** متغیرها** را انتخاب کرده و بر روی دکمه ** متغیر جدید** کلیک کنید.
 
-<img
-  src="/images/e‌nvironments-click-button.jpg"
-  class="border border-dark rounded"
-/>
+![environment click button](/images/e‌nvironments-click-button.jpg)
 
 ##### قدم سوم: انتخاب متغییر محلی
 
 بر روی آیکون ** ویرایش‌** کلیک کنید تا به رنگ سبز تغییر کند.
 نام مورد نظر خود را در قسمت ** key** تعریف کرده و سپس، مقدار متغیر تعریف شده را در قسمت **value** وارد کنید. و در آخر دکمه ** سبز** را فشار دهید تا تغییرات ایجاد شده ذخیره گردند.
 
-<img
-  src="/images/e‌nvironments-create-env.jpg"
-  class="border border-dark rounded"
-/>
+![create environment variable](/images/e‌nvironments-create-env.jpg)
 
-<Notice variant="success">
+<Notice variant='success'>
   این مقادیر به صورت رمزگذاری شده می‌باشند و تنها برای کاربرانی که به برنامه‌ی
   شما دسترسی دارند قابل مشاهد است. بنابراین می‌توانید از داده های حساس مانند
   توکن یا کلیدهای خصوصی استفاده کنید.
 </Notice>
 
-
-
 - اگر یک متغیر (ENV) با نام `DB_URL` ایجاد می کنید، در سورس برنامه‌ی شما به صورت
   `process.env.DB_URL` در دسترس خواهد بود.
 
-
 #### ویرایش متغییر محلی
 
-برای ویرایش متغییرهای محلی می‌بایست بر روی آیکون **ویرایش**  متغییر مورد نظر کلیک کنید و بعد از اعمال تغییرات دکمه ** سبز ** را فشار دهید تا تغییرات ذخیره گردند.
+برای ویرایش متغییرهای محلی می‌بایست بر روی آیکون **ویرایش** متغییر مورد نظر کلیک کنید و بعد از اعمال تغییرات دکمه ** سبز ** را فشار دهید تا تغییرات ذخیره گردند.
 
-<img
-  src="/images/e‌nvironments-update-env.jpg"
-  class="border border-dark rounded"
-/>
-
+![update environment variable](/images/e‌nvironments-update-env.jpg)
 
 #### حذف متغییر محلی
 
 برای حذف یک متغییر محلی، باید بر روی آیکون ** حذف ** کلیک کنید تا به رنگ قرمز تغییر کند. سپس با کلیک دوباره بر روی آیکون، متغییر مورد نظر حذف می‌گردد.
 
-<img
-  src="/images/e‌nvironments-delete-env.jpg"
-  class="border border-dark rounded"
-/>
+![delete environment variable](/images/e‌nvironments-delete-env.jpg)
 
 #### ریستارت
-برای اینکه تغییرات جدید بر روی برنامه شما اعمال شود، می‌بایست از قسمت ‌‌[داشبورد](https://dashboard.fing.ir)  و ** نمای کلی ** بر روی دکمه ** ریستارت ** کلیک کنید.
 
-<img
-  src="/images/e‌nvironments-start.jpg"
-  class="border border-dark rounded"
-/>
+برای اینکه تغییرات جدید بر روی برنامه شما اعمال شود، می‌بایست از قسمت ‌‌[داشبورد](https://dashboard.fing.ir) و ** نمای کلی ** بر روی دکمه ** ریستارت ** کلیک کنید.
+
+![apply environment changes](/images/e‌nvironments-start.jpg)
