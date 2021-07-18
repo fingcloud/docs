@@ -13,12 +13,12 @@ export const sidebarItems = [
       { label: 'دستورات', slug: '/cli/commands' },
     ]
   },
-  // {
-  //   title: 'Git',
-  //   pages: [
-  //     { label: 'گیت ‌هاب', slug: '/git/fing-github' } 
-  //   ]
-  // },
+  {
+    title: 'Git',
+    pages: [
+      { label: 'گیت ‌هاب', slug: '/git/fing-github' } 
+    ]
+  },
   {
     title: 'دامنه‌ها',
     pages: [
