@@ -14,34 +14,18 @@ export const sidebarItems = [
     ]
   },
   {
-    title: 'Git',
+    title: 'برنامه‌ها',
     pages: [
-      { label: 'گیت ‌هاب', slug: '/git/fing-github' } 
-    ]
-  },
-  {
-    title: 'دامنه‌ها',
-    pages: [
-      { label: 'مدیریت دامنه‌‌ها', slug: '/domains/custom-domains' }
-    ]
-  },
-  {
-    title: 'متغیرها ENV',
-    pages: [
-      { label: 'متغیرها', slug: '/env/environment-variables' },
-    ]
-  },
-  {
-    title: 'لاگ‌ها',
-    pages: [
-      { label: 'لاگ‌ها', slug: '/logs' },
+      { label: 'نمای کلی', slug: '/apps/overview' },
+      { label: 'استقرارها', slug: '/apps/deployments' },
+      { label: 'دامنه‌‌ها', slug: '/apps/domains' },
+      { label: 'متغیرها', slug: '/apps/environment-variables' },
+      { label: 'لاگ‌ها', slug: '/apps/logs' },
     ]
   },
   {
     title: 'پلتفرم',
     pages: [
-      { label: 'برنامه‌ها', slug: '/platform/apps' },
-      { label: 'استقرارها', slug: '/platform/deployments' },
       { label: 'NodeJs', slug: '/platform/node' },
       { label: 'Static', slug: '/platform/static' },
       { label: 'Next', slug: '/platform/next' },
