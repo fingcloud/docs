@@ -30,7 +30,7 @@ const withMDX = require('@next/mdx')({
 
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true,
+    // ignoreDuringBuilds: true,
   },
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
