@@ -31,17 +31,9 @@ export const sidebarItems = [
       { label: 'Next', slug: '/platform/next' },
       { label: 'Nuxt', slug: '/platform/nuxt' },
       { label: 'React', slug: '/platform/react' },
-      { label: 'Laravel', slug: '/platform/laravel' },
-      { label: 'PHP', slug: '/platform/php' },
-      { label: 'Golang', slug: '/platform/golang' },
       { label: 'Vue', slug: '/platform/vue' },
       { label: 'Docker', slug: '/platform/docker' },
-      { label: 'Flask', slug: '/platform/flask' },
-      { label: 'Ruby', slug: '/platform/ruby' },
-      { label: 'Angular', slug: '/platform/angular' },
-      { label: 'Django', slug: '/platform/django' },
-      { label: 'React App', slug: '/platform/react-app' },
-      { label: 'Asp.Net', slug: '/platform/netcore' },
+      { label: 'Gatsby', slug: '/platform/gatsby' }
     ]
   },
 ]
