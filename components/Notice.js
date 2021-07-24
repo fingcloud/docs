@@ -1,9 +1,9 @@
 
 const variants = {
-  success: { wrapper: 'bg-green-50', icon: '✅' },
-  info: { wrapper: 'bg-indigo-50', icon: 'ℹ️' },
-  warning: { wrapper: 'bg-yellow-50', icon: '💡' },
-  danger: { wrapper: 'bg-red-50', icon: '🚨' },
+  success: { wrapper: 'bg-green-100', icon: '✅' },
+  info: { wrapper: 'bg-indigo-100', icon: 'ℹ️' },
+  warning: { wrapper: 'bg-yellow-100', icon: '💡' },
+  danger: { wrapper: 'bg-red-100', icon: '🚨' },
 }
 
 export const Notice = ({ variant, children, ...props }) => {
