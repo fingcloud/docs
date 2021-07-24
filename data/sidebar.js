@@ -28,12 +28,12 @@ export const sidebarItems = [
     pages: [
       { label: 'NodeJs', slug: '/platform/node' },
       { label: 'Static', slug: '/platform/static' },
-      { label: 'Next', slug: '/platform/next' },
-      { label: 'Nuxt', slug: '/platform/nuxt' },
       { label: 'React', slug: '/platform/react' },
-      { label: 'Vue', slug: '/platform/vue' },
+      { label: 'VueJs', slug: '/platform/vue' },
+      { label: 'NextJs', slug: '/platform/next' },
+      { label: 'NuxtJs', slug: '/platform/nuxt' },
+      { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Docker', slug: '/platform/docker' },
-      { label: 'Gatsby', slug: '/platform/gatsby' }
     ]
   },
 ]
