@@ -1,5 +1,5 @@
-@import '/fonts/vazir-fd/font.css';
+@import 'https://fing.ir/fonts/IRANSansWeb/font.css';
 
 body {
-  font-family: Vazir !important;
+  font-family: IRANSans !important;
 }
