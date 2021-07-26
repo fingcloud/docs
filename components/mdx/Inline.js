@@ -1,2 +1,2 @@
 export const Inline = props =>
-  <code className="bg-indigo-100 border rounded px-1 py-0.5 text-sm border-indigo-300 text-indigo-600 font-mono " {...props} />
+  <code className="bg-blue-100 rounded px-1 py-1 text-sm border border-blue-200 text-blue-600 font-mono " {...props} />

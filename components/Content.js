@@ -41,11 +41,11 @@ export const Content = ({ children }) => {
     <div className="w-full">
       <header className="flex items-center justify-end pt-6 pb-2 px-8">
         <Link href="https://dashboard.fing.ir/" passHref>
-          <a className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-1.5 rounded transition-all duration-100">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
+          <a className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded transition-all duration-100" target="_blank">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
         </Link>
       </header>
 
-      <main className="px-8 pb-8">
+      <main className="px-8 pb-8 text-justify">
         {children}
       </main>
 
@@ -53,7 +53,7 @@ export const Content = ({ children }) => {
         <div className="flex items-center justify-between space-x-4 mb-8">
           {prevPage
             ? <Link href={prevPage.slug} passHref>
-              <a className="text-indigo-500 hover:text-indigo-600 block font-medium text-lgrounded-md text-lg text-right transition-all duration-150">
+              <a className="text-blue-500 hover:text-blue-600 block font-medium text-lgrounded-md text-lg text-right transition-all duration-150">
                 <div className="text-gray-600 text-sm " ><FiArrowRight className="inline-block ml-2" size="18" />قبلی</div>
                 {prevPage.label}
               </a>
@@ -62,7 +62,7 @@ export const Content = ({ children }) => {
           }
           {nextPage
             ? <Link href={nextPage.slug} passHref>
-              <a className="text-indigo-500 hover:text-indigo-600 block font-medium text-lgrounded-md text-lg text-left transition-all duration-150">
+              <a className="text-blue-500 hover:text-blue-600 block font-medium text-lgrounded-md text-lg text-left transition-all duration-150">
                 <div className="text-gray-600 text-sm" >بعدی<FiArrowLeft className="inline-block mr-2" size="18" /></div>
                 {nextPage.label}
               </a>
@@ -75,7 +75,7 @@ export const Content = ({ children }) => {
       <hr className="mx-8" />
       <div className="flex items-center justify-start px-8 my-4">
         <Link href={editLink} passHref>
-          <a className="text-sm text-gray-500 hover:text-indigo-600">این صفحه را در گیت‌هاب ویرایش کنید</a>
+          <a className="text-sm text-gray-500 hover:text-blue-600">این صفحه را در گیت‌هاب ویرایش کنید</a>
         </Link>
       </div>
     </div>

@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           cardType: 'summary_large_image',
         }}
       />
-      <NextNprogress className="bg-indigo-500" color="#6366f1" options={{ showSpinner: false }} />
+      <NextNprogress className="bg-blue-500" color="#2176ff" options={{ showSpinner: false }} />
       <Component {...pageProps} />
     </MDXProvider>
   )
