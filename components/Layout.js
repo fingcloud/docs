@@ -21,7 +21,7 @@ export default function Layout({ children, meta }) {
         }}
       />
 
-      < ArticleJsonLd
+      <ArticleJsonLd
         url={url}
         description={meta.description}
         title={meta.title}
