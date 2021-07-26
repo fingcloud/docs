@@ -41,11 +41,11 @@ export const Content = ({ children }) => {
     <div className="w-full">
       <header className="flex items-center justify-end pt-6 pb-2 px-8">
         <Link href="https://dashboard.fing.ir/" passHref>
-          <a className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded transition-all duration-100">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
+          <a className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded transition-all duration-100" target="_blank">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
         </Link>
       </header>
 
-      <main className="px-8 pb-8">
+      <main className="px-8 pb-8 text-justify">
         {children}
       </main>
 
