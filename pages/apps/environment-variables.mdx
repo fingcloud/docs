@@ -13,24 +13,24 @@ import { Notice } from "components/Notice";
 
 ## اضافه کردن متغیر:
 
-### ۱: انتخاب برنامه
+### ۱ـ انتخاب برنامه
 
 از قسمت [داشبورد](https://dashboard.fing.ir)، برنامه‌ای که می‌خواهید متغیر‌های محلی برای آن تعریف کنید را انتخاب کنید.
 
-![choose app](/images/choose-app.jpg)
+![choose app](/images/apps-choose.jpg)
 
-### ۲: رفتن به متغیرها
+### ۲ـ رفتن به متغیرها
 
 بعد از انتخاب برنامه مورد نظر، گزینه‌ی ** متغیرها** را انتخاب کرده و بر روی دکمه ** متغیر جدید** کلیک کنید.
 
-![environment click button](/images/e‌nvironments-click-button.jpg)
+![environment click button](/images/apps-e‌nvironments-click-button.jpg)
 
-### ۳: انتخاب متغییر محلی
+### ۳ـ انتخاب متغییر محلی
 
-بر روی آیکون ** ویرایش‌** کلیک کنید تا به رنگ سبز تغییر کند.
-نام مورد نظر خود را در قسمت ** key** تعریف کرده و سپس، مقدار متغیر تعریف شده را در قسمت **value** وارد کنید. و در آخر دکمه ** سبز** را فشار دهید تا تغییرات ایجاد شده ذخیره گردند.
+بر روی آیکون ** ویرایش‌** کلیک کنید تا به رنگ نارنجی تغییر کند.
+نام مورد نظر خود را در قسمت ** key** تعریف کرده و سپس، مقدار آن را در قسمت **value** وارد کنید. و در آخر آیکون نارنجی را فشار دهید تا تغییرات ایجاد شده ذخیره گردند.
 
-![create environment variable](/images/e‌nvironments-create-env.jpg)
+![create environment variable](/images/apps-e‌nvironments-create-env.jpg)
 
 <Notice variant="success">
   این مقادیر به صورت رمزگذاری شده می‌باشند و تنها برای کاربرانی که به برنامه‌ی
@@ -43,18 +43,26 @@ import { Notice } from "components/Notice";
 
 ## ویرایش متغییر محلی
 
-برای ویرایش متغیرهای محلی می‌بایست بر روی آیکون **ویرایش** متغیر مورد نظر کلیک کنید و بعد از اعمال تغییرات دکمه ** سبز ** را فشار دهید تا تغییرات ذخیره گردند.
+برای ویرایش متغیرهای محلی می‌بایست بر روی آیکون **ویرایش** متغیر مورد نظر کلیک کنید و بعد از اعمال تغییرات دکمه ** نارنجی ** را فشار دهید تا تغییرات ذخیره گردند.
 
-![update environment variable](/images/e‌nvironments-update-env.jpg)
+![update environment variable](/images/apps-e‌nvironments-update-env.jpg)
 
 ## حذف متغیر محلی
 
 برای حذف یک متغیر محلی، باید بر روی آیکون ** حذف ** کلیک کنید تا به رنگ قرمز تغییر کند. سپس با کلیک دوباره بر روی آیکون، متغیر مورد نظر حذف می‌گردد.
 
-![delete environment variable](/images/e‌nvironments-delete-env.jpg)
+![delete environment variable](/images/apps-e‌nvironments-delete-env.jpg)
 
 ## راه‌اندازی برنامک
 
-برای اینکه تغییرات جدید بر روی برنامه شما اعمال شود، می‌بایست از قسمت ‌‌[داشبورد](https://dashboard.fing.ir) و ** نمای کلی ** بر روی دکمه ** ریستارت ** کلیک کنید.
+برای اینکه تغییرات جدید بر روی برنامه شما اعمال شود می‌توانید یکی از دو راه زیر را انتخاب نمایید:
 
-![apply environment changes](/images/e‌nvironments-start.jpg)
+از قسمت ‌‌[داشبورد](https://dashboard.fing.ir) و بخش ** نمای کلی ** بر روی دکمه ** ریستارت ** کلیک کنید.
+
+![apply environment changes](/images/apps-e‌nvironments-start.jpg)
+
+یا از طریق ترمینال و در ریشه اصلی برنامه‌ی خود‌، دستور `fing up` را وارد کنید.
+
+```
+$ fing up
+```
