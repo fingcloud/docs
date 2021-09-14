@@ -9,17 +9,17 @@ import { Notice } from "components/Notice";
 
 ## ۱ـ ایجاد برنامه
 
-- از قسمت ‌[داشبورد](https://dashboard.fing.ir) بر روی ** ساخت برنامه جدید** کلیک کنید.
+- از قسمت ‌[داشبورد](https://dashboard.fing.ir) بر روی ** ساخت برنامه جدید** کلیک کرده و گزینه **پلتفرم** را انتخاب کنید.
 
-![create app](/images/cli-create-app.jpg)
+![create app](/images/create-app.jpg)
 
-- سپس نام برنامه و پلتفرمی که از آن استفاده می‌کنید را انتخاب نمایید.
+- سپس نام برنامه و فریمورکی که از آن استفاده می‌کنید را انتخاب نمایید.
 
-![choose app name](/images/cli-choose-appname.jpg)
+![choose platform](/images/choose-platform.jpg)
 
 - پلن مورد نیاز خود را انتخاب کرده و بر روی دکمه ** ایجاد برنامه** کلیک کنید.
 
-![choose app plan](/images/cli-choose-plan.jpg)
+![choose app plan](/images/choose-plan.jpg)
 
 ## ۲ـ فایل fing.yaml
 
@@ -30,11 +30,13 @@ app: "server"
 platform: "node"
 port: 3000
 ```
+<Notice variant="info">
+  فینگ این قابلیت را دارد که پلتفرم و پورت برنامه شما را بصورت خودکار تشخیص دهد. بنابر این اگر در فایل fing.yaml فقط نام برنامه‌ی خود را ذکر کنید، باز هم برنامه شما به درستی مستقر خواهد شد.
+</Notice>
 
 ## ۳ـ دیپلوی کردن
 
-وارد ریشه اصلی برنامه خود شوید و دستور زیر را اجرا کنید تا اولین استقرار انجام شود.
-می‌توانید دستور `fing deploy` و یا   `fing up` را وارد کنید.
+وارد ریشه اصلی برنامه خود شوید و دستور `fing deploy` و یا `fing up` را وارد کنید تا اولین استقرار شما انجام گیرد.
 
 ```
 $ fing up
