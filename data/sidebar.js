@@ -21,6 +21,7 @@ export const sidebarItems = [
       { label: 'دامنه‌‌ها', slug: '/apps/domains' },
       { label: 'متغیرها', slug: '/apps/environment-variables' },
       { label: 'لاگ‌ها', slug: '/apps/logs' },
+      { label: 'دیسک‌ها', slug: '/apps/disks' },
     ]
   },
   {
