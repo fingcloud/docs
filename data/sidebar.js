@@ -38,4 +38,10 @@ export const sidebarItems = [
       { label: 'Docker', slug: '/platform/docker' },
     ]
   },
+  {
+    title: 'دیتابیس',
+    pages: [
+      { label: 'MySQL', slug: '/database/mysql' },
+    ]
+  },
 ]
