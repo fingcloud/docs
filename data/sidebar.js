@@ -60,6 +60,7 @@ export const sidebarItems = [
       { label: 'Joomla', slug: '/service/joomla' },
       { label: 'Prestashop', slug: '/service/prestashop' },
       { label: 'Ghost', slug: '/service/ghost' },
+      { label: 'Parse', slug: '/service/parse' },
     ]
   },
 ]
