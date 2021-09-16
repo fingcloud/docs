@@ -50,7 +50,17 @@ export const sidebarItems = [
   {
     title: 'سرویس‌ها',
     pages: [
+      { label: 'Nginx', slug: '/service/nginx' },
       { label: 'Gitea', slug: '/service/gitea' },
+      { label: 'Wordpress', slug: '/service/wordpress' },
+      { label: 'Rapidleech', slug: '/service/rapidleech' },
+      { label: 'Filestash', slug: '/service/filestash' },
+      { label: 'Grafana', slug: '/service/grafana' },
+      { label: 'Chrome', slug: '/service/chrome' },
+      { label: 'Joomla', slug: '/service/joomla' },
+      { label: 'Prestashop', slug: '/service/prestashop' },
+      { label: 'Ghost', slug: '/service/ghost' },
+      { label: 'Parse', slug: '/service/parse' },
     ]
   },
 ]
