@@ -59,6 +59,7 @@ export const sidebarItems = [
       { label: 'Chrome', slug: '/service/chrome' },
       { label: 'Joomla', slug: '/service/joomla' },
       { label: 'Prestashop', slug: '/service/prestashop' },
+      { label: 'Ghost', slug: '/service/ghost' },
     ]
   },
 ]
