@@ -56,6 +56,7 @@ export const sidebarItems = [
       { label: 'Rapidleech', slug: '/service/rapidleech' },
       { label: 'Filestash', slug: '/service/filestash' },
       { label: 'Grafana', slug: '/service/grafana' },
+      { label: 'Chrome', slug: '/service/chrome' },
     ]
   },
 ]
