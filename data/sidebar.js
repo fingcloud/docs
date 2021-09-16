@@ -47,4 +47,10 @@ export const sidebarItems = [
       { label: 'Redis', slug: '/database/redis' },
     ]
   },
+  {
+    title: 'سرویس‌ها',
+    pages: [
+      { label: 'Gitea', slug: '/service/gitea' },
+    ]
+  },
 ]
