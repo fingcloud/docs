@@ -52,6 +52,7 @@ export const sidebarItems = [
     pages: [
       { label: 'Nginx', slug: '/service/nginx' },
       { label: 'Gitea', slug: '/service/gitea' },
+      { label: 'Wordpress', slug: '/service/wordpress' },
     ]
   },
 ]
