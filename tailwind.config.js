@@ -1,9 +1,11 @@
+const colors = require('tailwindcss/colors')
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './next.config.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
+        ...colors,
         gray: {
           '50': '#F7FAFC',
           '100': '#EDF2F7',
