@@ -55,6 +55,7 @@ export const sidebarItems = [
       { label: 'Wordpress', slug: '/service/wordpress' },
       { label: 'Rapidleech', slug: '/service/rapidleech' },
       { label: 'Filestash', slug: '/service/filestash' },
+      { label: 'Grafana', slug: '/service/grafana' },
     ]
   },
 ]
