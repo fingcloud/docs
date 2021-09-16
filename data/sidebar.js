@@ -57,6 +57,7 @@ export const sidebarItems = [
       { label: 'Filestash', slug: '/service/filestash' },
       { label: 'Grafana', slug: '/service/grafana' },
       { label: 'Chrome', slug: '/service/chrome' },
+      { label: 'Joomla', slug: '/service/joomla' },
     ]
   },
 ]
