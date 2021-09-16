@@ -16,7 +16,7 @@ export const Sidebar = () => {
 
       {sidebarItems.map((item, index) => (
         <div key={index}>
-          <h5 className="px-4 my-2 text-sm font-medium">{item.title}</h5>
+          <h5 className="px-4 my-2 font-extrabold">{item.title}</h5>
           <ul key={index} className="mb-6 list-none">
             {item.pages.map((page, index) => (
               <li key={index}>

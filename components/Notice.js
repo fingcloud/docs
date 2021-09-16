@@ -1,20 +1,17 @@
 
 const variants = {
-  success: { wrapper: 'bg-green-100', icon: '✅' },
-  info: { wrapper: 'bg-indigo-100', icon: 'ℹ️' },
-  warning: { wrapper: 'bg-yellow-100', icon: '💡' },
-  danger: { wrapper: 'bg-red-100', icon: '🚨' },
+  success: { wrapper: 'border-green-500 bg-green-100 text-gray-900' },
+  info: { wrapper: 'border-blue-500 bg-blue-100 text-gray-900' },
+  warning: { wrapper: 'border-yellow-500 bg-yellow-100 text-gray-900' },
+  danger: { wrapper: 'border-red-500 bg-red-100 text-gray-900' },
 }
 
 export const Notice = ({ variant, children, ...props }) => {
   const variantData = variant ? variants[variant] : variants['info']
 
   return (
-    <div className={`${variantData.wrapper} text-gray-800 flex items-center rounded-lg mt-6 py-2`}>
-      <div className="px-3 text-xl select-none">{variantData.icon}</div>
-      <div className="pl-4">
-        <p>{children}</p>
-      </div>
+    <div className={`${variantData.wrapper} flex items-center border-r-4 rounded mt-6 py-4 px-6`}>
+      <p>{children}</p>
     </div>
   )
 }
