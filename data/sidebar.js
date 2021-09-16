@@ -58,6 +58,7 @@ export const sidebarItems = [
       { label: 'Grafana', slug: '/service/grafana' },
       { label: 'Chrome', slug: '/service/chrome' },
       { label: 'Joomla', slug: '/service/joomla' },
+      { label: 'Prestashop', slug: '/service/prestashop' },
     ]
   },
 ]
