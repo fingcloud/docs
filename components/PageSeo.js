@@ -25,7 +25,7 @@ export const PageSeo = ({ title, description, url, created_at, modified_at }) =>
         datePublished={created_at}
         dateModified={modified_at}
         authorName="Fing"
-        publisherLogo="https://fing.ir/images/icon-dark.png"
+        publisherLogo="https://fing.ir/images/icon.png"
         publisherName="Fing"
       />
     </>

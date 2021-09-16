@@ -1,6 +1,6 @@
 
 export const Paragraph = props =>
-  <p className="text-gray-700 font-normal my-4 leading-8" {...props} />
+  <p className="my-4 font-normal leading-8 text-gray-700" {...props} />
 
 export const Link = props =>
-  <a className="font-medium text-blue-500 hover:underline hover:text-blue-600 transition-all duration-100 relative" {...props} />
+  <a className="relative font-medium text-blue-500 transition-all duration-100 hover:underline hover:text-blue-600" {...props} />
