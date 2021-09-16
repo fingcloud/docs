@@ -38,4 +38,19 @@ export const sidebarItems = [
       { label: 'Docker', slug: '/platform/docker' },
     ]
   },
+  {
+    title: 'دیتابیس',
+    pages: [
+      { label: 'MySQL', slug: '/database/mysql' },
+      { label: 'PostgreSQL', slug: '/database/postgresql' },
+      { label: 'MongoDB', slug: '/database/mongodb' },
+      { label: 'Redis', slug: '/database/redis' },
+    ]
+  },
+  {
+    title: 'سرویس‌ها',
+    pages: [
+      { label: 'Gitea', slug: '/service/gitea' },
+    ]
+  },
 ]

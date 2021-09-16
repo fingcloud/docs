@@ -10,13 +10,13 @@ export const Sidebar = () => {
       <div className="flex items-center justify-between px-4 py-6">
         <a href="/" className="flex items-center">
           <img src="https://fing.ir/images/icon.png" className="ml-4 w-8 h-8" alt="icon" />
-          <div className="text-gray-800 font-medium text-lg">مستندات فینگ</div>
+          <div className="text-gray-800 font-extrabold text-lg">مستندات فینگ</div>
         </a>
       </div>
 
       {sidebarItems.map((item, index) => (
         <div key={index}>
-          <h5 className="font-medium text-sm px-4 my-2">{item.title}</h5>
+          <h5 className="font-extrabold px-4 my-2">{item.title}</h5>
           <ul key={index} className="mb-6 list-none">
             {item.pages.map((page, index) => (
               <li key={index}>
