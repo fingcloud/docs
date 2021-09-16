@@ -50,6 +50,7 @@ export const sidebarItems = [
   {
     title: 'سرویس‌ها',
     pages: [
+      { label: 'Nginx', slug: '/service/nginx' },
       { label: 'Gitea', slug: '/service/gitea' },
     ]
   },
