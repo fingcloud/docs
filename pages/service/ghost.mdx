@@ -1,0 +1,44 @@
+---
+title: Ghost
+description: نحوه‌ی راه‌اندازی برنامه Ghost بر روی سکوی ابری فینگ.
+---
+
+import { PlatformHead, Platform } from "components/PlatformHead";
+import { Notice } from "components/Notice";
+
+
+<Platform>
+  <PlatformHead title="برنامه Ghost" src="https://symbols.getvecta.com/stencil_81/30_ghost-icon.cd1ca3285a.png" />
+</Platform>
+
+# مراحل نصب Ghost در فینگ
+
+- از قسمت [داشبورد](https://dashboard.fing.ir) وارد بخش **برنامه‌ها** شوید و بر روی دکمه **ساخت برنامه جدید** کلیک کرده و گزینه **برنامه‌‌های آماده** را انتخاب کنید.
+
+![create service](/images/service-create.jpg)
+
+- بر روی برنامه **gohst** کلیک کنید.
+
+![choose service](/images/service-choose-gohst.jpg)
+
+- نام برنامه، نسخه ghost که می‌خواهید نصب شود و دیتابیس آن را انتخاب نمایید.
+
+![service name](/images/service-ghost-create.jpg)
+
+<Notice variant="info">
+  سرویس <b>ghost</b> برای اجرا شدن نیاز به یک دیتابیس دارد. شما می‌توانید به{" "}
+  <b>فینگ</b> این اجازه را بدهید که به صورت اتوماتیک یک دیتابیس جداگانه برای آن
+  راه‌اندازی کند، که در این صورت تمام کانفیگ‌های آن خودکار انجام خواهد شد. و یا
+  می‌توانید از دیتابیس آماده دیگری استفاده کنید.
+</Notice>
+
+
+- در پایان پلن مورد نیاز خود را انتخاب کرده و بر روی دکمه **ایجاد برنامه** کلیک کنید تا سرویس ghost شما در کمترین زمان ممکن راه‌اندازی شود.
+
+![choose plan](/images/choose-plan.jpg)
+
+## مشاهده خروجی
+
+بعد از اتمام مراحل نصب و راه‌اندازی، فینگ برای شما یک زیر دامنه‌‌ای‌ با عنوان `https://my-ghost.apps.fing.ir` اختصاص می‌دهد که می‌توانید با کلیک کردن بر روی آن، سرویس **گوست** خود را مشاهده نمایید.
+
+- همچنین شما می‌توانید از قسمت [دامنه‌ها](/apps/domains) برای سرویس خود دامنه‌ی اختصاصی متصل کنید.
