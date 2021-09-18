@@ -4,6 +4,8 @@ description: نحوه‌ی راه‌اندازی برنامه Prestashop بر ر
 ---
 
 import { PlatformHead, Platform } from "components/PlatformHead";
+import { Notice } from "components/Notice";
+
 
 <Platform>
   <PlatformHead title="برنامه Prestashop" src="https://cdn-icons-png.flaticon.com/512/825/825533.png" />
@@ -18,3 +20,24 @@ import { PlatformHead, Platform } from "components/PlatformHead";
 - بر روی برنامه **prestashop** کلیک کنید.
 
 ![choose service](/images/service-choose-prestashop.jpg)
+
+- نام برنامه، نسخه prestashop که می‌خواهید نصب شود و دیتابیس آن را انتخاب نمایید.
+
+![service name](/images/service-prestashop-create.jpg)
+
+<Notice variant="info">
+  سرویس <b>prestashop</b> برای اجرا شدن نیاز به یک دیتابیس دارد. شما می‌توانید به{" "}
+  <b>فینگ</b> این اجازه را بدهید که به صورت اتوماتیک یک دیتابیس جداگانه برای آن
+  راه‌اندازی کند، که در این صورت تمام کانفیگ‌های آن خودکار انجام خواهد شد. و یا
+  می‌توانید از دیتابیس آماده دیگری استفاده کنید.
+</Notice>
+
+- در پایان پلن مورد نیاز خود را انتخاب کرده و بر روی دکمه **ایجاد برنامه** کلیک کنید تا سرویس prestashop شما در کمترین زمان ممکن راه‌اندازی شود.
+
+![choose plan](/images/choose-plan.jpg)
+
+## مشاهده خروجی
+
+بعد از اتمام مراحل نصب و راه‌اندازی، فینگ برای شما یک زیر دامنه‌‌ای‌ با عنوان `https://prestashop-site.apps.fing.ir` اختصاص می‌دهد که می‌توانید با کلیک کردن بر روی آن وارد بخش پنل سایت پرستاشاپی خود شوید.
+
+- همچنین شما می‌توانید از قسمت [دامنه‌ها](/apps/domains) برای سایت پرستاشاپی خود دامنه‌ی اختصاصی متصل نمایید.
