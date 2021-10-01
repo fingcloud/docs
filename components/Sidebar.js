@@ -6,17 +6,17 @@ export const Sidebar = () => {
   const router = useRouter()
 
   return (
-    <div className="border-l h-screen sticky top-0 overflow-y-auto w-80 ">
-      <div className="flex items-center justify-between px-4 py-6">
+    <div className="sticky top-0 h-screen overflow-y-auto border-l w-80 ">
+      <div className="flex items-center justify-between py-6">
         <a href="/" className="flex items-center">
-          <img src="https://fing.ir/images/icon.png" className="ml-4 w-8 h-8" alt="icon" />
-          <div className="text-gray-800 font-extrabold text-lg">مستندات فینگ</div>
+          <img src="https://fing.ir/images/icon.png" className="w-10 h-10 ml-4 md:w-12 md:h-12" alt="icon" />
+          <div className="text-lg font-medium text-gray-800">مستندات فینگ</div>
         </a>
       </div>
 
       {sidebarItems.map((item, index) => (
         <div key={index}>
-          <h5 className="font-extrabold px-4 my-2">{item.title}</h5>
+          <h5 className="px-4 my-2 font-extrabold">{item.title}</h5>
           <ul key={index} className="mb-6 list-none">
             {item.pages.map((page, index) => (
               <li key={index}>

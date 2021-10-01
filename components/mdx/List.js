@@ -1,9 +1,9 @@
 
 export const List = props =>
-  <ul className="list-disc list-inside my-5" {...props} />
+  <ul className="my-5 list-disc list-inside" {...props} />
 
 export const ListItem = props =>
-  <li className="font-light relative my-2" {...props} />
+  <li className="relative my-2 font-light" {...props} />
 
 export const OrderedList = props =>
-  <ol className="list-decimal list-inside my-5" {...props} />
+  <ol className="my-5 list-decimal list-inside" {...props} />

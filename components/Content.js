@@ -39,7 +39,7 @@ export const Content = ({ children }) => {
 
   return (
     <div className="w-full">
-      <header className="flex items-center justify-end pt-6 pb-2 px-8">
+      <header className="flex items-center justify-end px-8 pt-6 pb-2">
         <Link href="https://dashboard.fing.ir/" passHref>
           <a className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded transition-all duration-100" target="_blank">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
         </Link>
@@ -50,11 +50,11 @@ export const Content = ({ children }) => {
       </main>
 
       <div className="px-8 my-8">
-        <div className="flex items-center justify-between space-x-4 mb-8">
+        <div className="flex items-center justify-between mb-8 space-x-4">
           {prevPage
             ? <Link href={prevPage.slug} passHref>
-              <a className="text-blue-500 hover:text-blue-600 block font-medium text-lgrounded-md text-lg text-right transition-all duration-150">
-                <div className="text-gray-600 text-sm " ><FiArrowRight className="inline-block ml-2" size="18" />قبلی</div>
+              <a className="block text-lg font-medium text-right text-blue-500 transition-all duration-150 hover:text-blue-600 text-lgrounded-md">
+                <div className="text-sm text-gray-600 " ><FiArrowRight className="inline-block ml-2" size="18" />قبلی</div>
                 {prevPage.label}
               </a>
             </Link>
@@ -62,8 +62,8 @@ export const Content = ({ children }) => {
           }
           {nextPage
             ? <Link href={nextPage.slug} passHref>
-              <a className="text-blue-500 hover:text-blue-600 block font-medium text-lgrounded-md text-lg text-left transition-all duration-150">
-                <div className="text-gray-600 text-sm" >بعدی<FiArrowLeft className="inline-block mr-2" size="18" /></div>
+              <a className="block text-lg font-medium text-left text-blue-500 transition-all duration-150 hover:text-blue-600 text-lgrounded-md">
+                <div className="text-sm text-gray-600" >بعدی<FiArrowLeft className="inline-block mr-2" size="18" /></div>
                 {nextPage.label}
               </a>
             </Link>
