@@ -45,6 +45,7 @@ export const sidebarItems = [
       { label: 'PostgreSQL', slug: '/database/postgresql' },
       { label: 'MongoDB', slug: '/database/mongodb' },
       { label: 'Redis', slug: '/database/redis' },
+      { label: 'InfluxDB', slug: '/database/influxdb' },
     ]
   },
   {
@@ -61,6 +62,8 @@ export const sidebarItems = [
       { label: 'Prestashop', slug: '/service/prestashop' },
       { label: 'Ghost', slug: '/service/ghost' },
       { label: 'Parse', slug: '/service/parse' },
+      { label: 'Prometheus', slug: '/service/prometheus' },
+      { label: 'Minio', slug: '/service/minio' },
     ]
   },
 ]
