@@ -32,6 +32,7 @@ const nextConfig = {
   eslint: {
     // ignoreDuringBuilds: true,
   },
+  swcMinify: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
 }
