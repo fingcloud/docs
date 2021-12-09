@@ -5,7 +5,7 @@ import { ArticleJsonLd, NextSeo } from 'next-seo'
 
 export default function Layout({ children, meta }) {
   const router = useRouter()
-  const url = `https://docs.fing.ir${router.asPath}`
+  const url = `https://fing.ir/docs${router.asPath}`
 
   return (
     <div className="relative flex max-w-6xl min-h-screen mx-auto">
