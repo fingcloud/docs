@@ -38,6 +38,7 @@ export const sidebarItems = [
       { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Flask', slug: '/platform/flask' },
       { label: 'Docker', slug: '/platform/docker' },
+      { label: 'Django', slug: '/platform/django' },
       { label: 'Python', slug: '/platform/python' },
       { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
     ]
