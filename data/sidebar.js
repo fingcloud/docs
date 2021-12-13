@@ -69,6 +69,7 @@ export const sidebarItems = [
       { label: 'Parse', slug: '/service/parse' },
       { label: 'Prometheus', slug: '/service/prometheus' },
       { label: 'Minio', slug: '/service/minio' },
+      { label: 'Registry', slug: '/service/registry' },
     ]
   },
 ]
