@@ -34,6 +34,7 @@ export const sidebarItems = [
       { label: 'NextJs', slug: '/platform/next' },
       { label: 'NuxtJs', slug: '/platform/nuxt' },
       { label: 'NestJs', slug: '/platform/nest' },
+      { label: 'Angular', slug: '/platform/angular' },
       { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Flask', slug: '/platform/flask' },
       { label: 'Docker', slug: '/platform/docker' },
