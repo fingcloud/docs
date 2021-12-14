@@ -33,9 +33,14 @@ export const sidebarItems = [
       { label: 'VueJs', slug: '/platform/vue' },
       { label: 'NextJs', slug: '/platform/next' },
       { label: 'NuxtJs', slug: '/platform/nuxt' },
+      { label: 'NestJs', slug: '/platform/nest' },
+      { label: 'Angular', slug: '/platform/angular' },
       { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Flask', slug: '/platform/flask' },
       { label: 'Docker', slug: '/platform/docker' },
+      { label: 'Django', slug: '/platform/django' },
+      { label: 'Python', slug: '/platform/python' },
+      { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
     ]
   },
   {
@@ -64,6 +69,7 @@ export const sidebarItems = [
       { label: 'Parse', slug: '/service/parse' },
       { label: 'Prometheus', slug: '/service/prometheus' },
       { label: 'Minio', slug: '/service/minio' },
+      { label: 'Registry', slug: '/service/registry' },
     ]
   },
 ]

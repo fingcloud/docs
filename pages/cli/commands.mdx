@@ -60,7 +60,7 @@ my-db            package      stop                                              
 با استفاده از دستور `fing app create [appname]` و نام برنامه دلخواه خود، لیست **پلن**‌های موجود برای شما نمایش داده می‌شود که شما می‌توانید از طریق دکمه فلش کیبورد خود، **پلن**‌ مناسب برنامه‌ی خود را انتخاب نمایید تا برنامه شما با موفقیت ایجاد شود.
 
 ```
-$fing app create myapp
+$ fing app create myapp
 ? select plan  [Use arrows to move, type to filter]
 > [ nano ]	Memory: 0.5G	CPU: 0.25	Storage: 5.0G	Price: 40,000 Tomans
   [ micro ]	Memory: 1.0G	CPU: 0.50	Storage: 10.0G	Price: 80,000 Tomans
@@ -73,7 +73,7 @@ $fing app create myapp
 با وارد کردن دستور `fing app start [appname]`، برنامه شما استارت می‌شود.
 
 ```
-$fing app start myapp
+$ fing app start myapp
 > app 'myapp' started
 
 ```
@@ -83,7 +83,7 @@ $fing app start myapp
 با کمک دستور `fing app stop [appname]`، برنامه شما به وضعیت **stop** در خواهد آمد.
 
 ```
-$fing app stop myapp
+$ fing app stop myapp
 > app 'myapp' started
 
 ```
@@ -93,7 +93,7 @@ $fing app stop myapp
 با اجرای `fing app restart [appname]` برنامه‌ی مورد نظر شما دوباره استارت می‌شود.
 
 ```
-$fing app restart myapp
+$ fing app restart myapp
 app 'myapp' restartd
 ```
 
@@ -150,7 +150,7 @@ $ fing app logs [myapp] --timestamps
 با دستور `fing auth ls` اکانت‌‌هایی که در **فینگ CLI** لوگین کرده‌اید را می‌توانید مشاهده کرده و از فعال بودن هر یک اطلاع پیدا نمایید.
 
 ```
-$fing auth ls
+$ fing auth ls
 EMAIL                        STATUS    LOGIN AT              LAST USED AT
 example@gmail.com            -         -                     about 1 hour ago
 my.emailname.job@gmail.com   ACTIVE    about 3 minutes ago   less than a minute ago
