@@ -1,7 +1,7 @@
 import { ArticleJsonLd, NextSeo } from "next-seo"
 
 export const PageSeo = ({ title, description, url, created_at, modified_at }) => {
-  const fullUrl = `https://docs.fing.ir${url}`
+  const fullUrl = `https://fing.ir/docs${url}`
 
   return (
     <>
