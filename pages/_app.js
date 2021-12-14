@@ -12,13 +12,13 @@ function MyApp({ Component, pageProps }) {
       <DefaultSeo
         title='مستندات فینگ'
         description='مستندات سرویس ابری فینگ'
-        canonical='https://docs.fing.ir/'
+        canonical='https://fing.ir/docs'
         titleTemplate='%s | مستندات فینگ'
         openGraph={{
           description: 'مستندات سرویس ابری فینگ',
           type: 'website',
           locale: 'fa_IR',
-          url: 'https://docs.fing.ir,',
+          url: 'https://fing.ir/docs',
           site_name: 'مستندات فینگ',
           title: 'مستندات فینگ'
         }}
