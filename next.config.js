@@ -34,7 +34,7 @@ const nextConfig = {
       {
         source: '/:path*',
         destination: 'https://fing.ir/docs/:path*',
-        permanent: false,
+        permanent: true,
         basePath: false,
         has: [
           { type: 'host', value: 'docs.fing.ir' },
