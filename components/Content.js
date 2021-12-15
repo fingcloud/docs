@@ -40,7 +40,7 @@ export const Content = ({ children }) => {
   return (
     <div className="w-full">
       <header className="flex items-center justify-end px-8 pt-6 pb-2">
-        <Link href="https://dashboard.fing.ir/" passHref>
+        <Link href="https://cloud.fing.ir/" passHref>
           <a className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded transition-all duration-100" target="_blank">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
         </Link>
       </header>
