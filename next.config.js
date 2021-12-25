@@ -46,7 +46,6 @@ const nextConfig = {
     // ignoreDuringBuilds: true,
   },
   // basePath: '/docs',
-  swcMinify: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
 }
