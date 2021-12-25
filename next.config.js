@@ -29,23 +29,23 @@ const withMDX = require('@next/mdx')({
 })
 
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        destination: 'https://fing.ir/docs/:path*',
-        permanent: true,
-        basePath: false,
-        has: [
-          { type: 'host', value: 'docs.fing.ir' },
-        ]
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/:path*',
+  //       destination: 'https://fing.ir/docs/:path*',
+  //       permanent: true,
+  //       basePath: false,
+  //       has: [
+  //         { type: 'host', value: 'docs.fing.ir' },
+  //       ]
+  //     },
+  //   ]
+  // },
   eslint: {
     // ignoreDuringBuilds: true,
   },
-  basePath: '/docs',
+  // basePath: '/docs',
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
