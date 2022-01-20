@@ -32,6 +32,7 @@ export const sidebarItems = [
       { label: 'React', slug: '/platform/react' },
       { label: 'VueJs', slug: '/platform/vue' },
       { label: 'NextJs', slug: '/platform/next' },
+      { label: 'Vite', slug: '/platform/vite' },
       { label: 'NuxtJs', slug: '/platform/nuxt' },
       { label: 'NestJs', slug: '/platform/nest' },
       { label: 'Angular', slug: '/platform/angular' },
