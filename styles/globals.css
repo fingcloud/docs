@@ -1,5 +1,10 @@
-@import 'https://fing.ir/fonts/IRANSansWeb/font.css';
+/* @import 'https://fing.ir/fonts/IRANSansWeb/font.css'; */
 
+html,
 body {
-  font-family: IRANSans !important;
+  padding: 0;
+  margin: 0;
+  font-family: Vazir !important;
+  direction: rtl;
+  scroll-behavior: smooth;
 }
