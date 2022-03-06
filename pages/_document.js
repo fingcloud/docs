@@ -1,5 +1,6 @@
 import NextDocument, { Head, Html, Main, NextScript } from "next/document"
 import Favicon from "components/Favicon"
+import { Yandex } from "components/Yandex"
 
 class Document extends NextDocument {
   static async getInitialProps(ctx) {
@@ -9,7 +10,9 @@ class Document extends NextDocument {
     return (
       < Html dir={'rtl'} lang={'fa'} >
         <Head>
+          <link href="https://fing.ir/fonts/VazirWeb/font.css" rel="stylesheet" />
           <Favicon />
+          <Yandex />
         </Head>
         <body >
           <Main />
