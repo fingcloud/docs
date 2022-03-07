@@ -8,7 +8,7 @@ class Document extends NextDocument {
   }
   render() {
     return (
-      < Html dir={'rtl'} lang={'fa'} >
+      <Html dir={'rtl'} lang={'fa'} >
         <Head>
           <link href="https://fing.ir/fonts/VazirWeb/font.css" rel="stylesheet" />
           <Favicon />
@@ -18,7 +18,7 @@ class Document extends NextDocument {
           <Main />
           <NextScript />
         </body>
-      </Html >
+      </Html>
     )
   }
 }
