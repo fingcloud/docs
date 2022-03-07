@@ -18,11 +18,11 @@ export const Sidebar = () => {
 
       {sidebarItems.map((item, index) => (
         <div key={index}>
-          <h5 className="px-4 my-2 font-extrabold">{item.title}</h5>
-          <ul key={index} className="mb-6 list-none">
+          <h5 className="my-2 text-sm font-bold">{item.title}</h5>
+          <ul key={index} className="mb-6 list-none border-r-1 border-gray-50 border-opacity-10 p-0">
             {item.pages.map((page, index) => (
-              <li key={index}>
-                <Link href={page.slug} passHref scroll={false}><a className={`transition-all duration-100 text-gray-700 block py-2 px-4 text-sm ${router.asPath === page.slug ? 'bg-blue-100 text-blue-500 border-r-2 border-blue-500' : 'text-gray-700'}`}>{page.label}</a></Link>
+              <li key={index} >
+                <Link href={page.slug} passHref scroll={false}><a className={`transition-all duration-150 font-light text-gray-700 block py-2 px-4 text-sm hover:text-blue-500 cursor:pointer border-r hover:border-blue-500 ${router.asPath === page.slug ? 'bg-blue-100 text-blue-500 border-r-1 border-blue-500' : 'text-gray-700'}`}>{page.label}</a></Link>
               </li>
             ))}
           </ul>

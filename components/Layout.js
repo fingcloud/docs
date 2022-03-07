@@ -8,7 +8,7 @@ export default function Layout({ children, meta }) {
   const url = `https://docs.fing.ir${router.asPath}`
 
   return (
-    <div className="relative flex max-w-6xl min-h-screen mx-auto">
+    <>
       <NextSeo
         title={meta.title}
         description={meta.description}
@@ -32,9 +32,9 @@ export default function Layout({ children, meta }) {
         publisherLogo="https://fing.ir/images/icon.png"
         publisherName="Fing"
       />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Content>{children}</Content>
-    </div>
+    </>
   )
 }
 
