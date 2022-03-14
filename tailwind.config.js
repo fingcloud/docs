@@ -2,6 +2,13 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './next.config.js'],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1200px',
+      '2xl': '1400px',
+    },
     extend: {
       colors: {
         ...colors,

@@ -14,7 +14,7 @@ class Document extends NextDocument {
           <Favicon />
           <Yandex />
         </Head>
-        <body >
+        <body className="relative w-full h-full antialiased text-gray-600">
           <Main />
           <NextScript />
         </body>

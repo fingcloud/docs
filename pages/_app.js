@@ -2,10 +2,10 @@ import { DefaultSeo } from "next-seo"
 import { MDXProvider } from "@mdx-js/react"
 import { components } from 'components/mdx'
 import NextNprogress from 'nextjs-progressbar'
+import { Sidebar } from "components/Sidebar"
+import { Navbar } from "components/Navbar"
 import 'styles/globals.css'
 import 'tailwindcss/tailwind.css'
-import { Sidebar } from "components/Sidebar"
-import { Content } from "components/Content"
 
 function MyApp({ Component, pageProps }) {
 
@@ -31,10 +31,13 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <NextNprogress className="bg-blue-500" color="#2176ff" options={{ showSpinner: false }} />
-      <div className="relative flex max-w-6xl min-h-screen mx-auto">
+      
+      <Navbar />
+
+      <main className="relative w-full px-4 mx-auto md:flex max-w-screen-2xl sm:px-6 lg:px-8 py-36">
         <Sidebar />
         <Component {...pageProps} />
-      </div>
+      </main>
     </MDXProvider>
   )
 }
