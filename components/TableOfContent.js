@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-
+import { useEffect } from "react";
 
 export const TableOfContent = ({ headers }) => {
   useEffect(() => {

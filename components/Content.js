@@ -1,7 +1,7 @@
 import Link from 'next/link'
+import { useMemo } from 'react'
 import { sidebarItems } from 'data/sidebar'
 import { useRouter } from 'next/dist/client/router'
-import { useMemo } from 'react'
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
 
 export const Content = ({ children }) => {
