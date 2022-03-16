@@ -6,28 +6,20 @@ export const Sidebar = () => {
   const router = useRouter()
 
   return (
-    <div className="sticky top-0 h-screen overflow-y-auto border-l w-80 ">
-      <div className="flex items-center justify-between py-6">
-        <Link href="/" passHref>
-          <a className="flex items-center">
-            <img src="https://fing.ir/images/icon.png" className="w-10 h-10 ml-4 md:w-12 md:h-12" alt="icon" />
-            <div className="text-lg font-medium text-gray-800">مستندات فینگ</div>
-          </a>
-        </Link>
-      </div>
-
-      {sidebarItems.map((item, index) => (
-        <div key={index}>
-          <h5 className="px-4 my-2 font-extrabold">{item.title}</h5>
-          <ul key={index} className="mb-6 list-none">
-            {item.pages.map((page, index) => (
-              <li key={index}>
-                <Link href={page.slug} passHref scroll={false}><a className={`transition-all duration-100 text-gray-700 block py-2 px-4 text-sm ${router.asPath === page.slug ? 'bg-blue-100 text-blue-500 border-r-2 border-blue-500' : 'text-gray-700'}`}>{page.label}</a></Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="hidden h-full md:block w-60 shrink-0"></div>
+      <nav className="z-40 bg-white hidden md:block fixed top-0 pt-36 pb-16 pr-0.5 w-[calc(100%-1rem)] md:w-60 h-full max-h-screen md:text-[13px] text-navy docs-left-sidebar overflow-y-auto leading-5">
+        {sidebarItems.map((item, index) => (
+          <dl key={index} className="leading-5">
+            <dt className="flex pb-1 text-base font-bold md:justify-start sm:justify-center">{item.title}</dt>
+            <dd key={index} className="mb-8 border-r border-gray-100">
+              {item.pages.map((page, index) => (
+                <Link key={index} href={page.slug} passHref scroll={true}><a className={`flex hover:text-blue-600 text-sm transition-colors py-1 border-r-[3px] pr-4 -mr-0.5 border-transparent hover:border-blue-500 ${router.asPath.split("#")[0] === page.slug ? 'text-blue-500 border-r-2 border-blue-500 font-semibold' : 'text-gray-700'}`}>{page.label}</a></Link>
+              ))}
+            </dd>
+          </dl>
+        ))}
+      </nav>
+    </>
   )
 }

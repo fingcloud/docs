@@ -8,17 +8,17 @@ class Document extends NextDocument {
   }
   render() {
     return (
-      < Html dir={'rtl'} lang={'fa'} >
+      <Html dir={'rtl'} lang={'fa'} >
         <Head>
           <link href="https://fing.ir/fonts/VazirWeb/font.css" rel="stylesheet" />
           <Favicon />
           <Yandex />
         </Head>
-        <body >
+        <body className="relative w-full h-full antialiased text-gray-600">
           <Main />
           <NextScript />
         </body>
-      </Html >
+      </Html>
     )
   }
 }

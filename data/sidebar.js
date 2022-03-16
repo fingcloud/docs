@@ -1,6 +1,6 @@
 export const sidebarItems = [
   {
-    title: 'اطلاعات کلی',
+    title: 'آشنایی با فینگ',
     pages: [
       { label: 'معرفی فینگ', slug: '/' },
     ]

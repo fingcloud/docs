@@ -1,7 +1,7 @@
 import Link from 'next/link'
+import { useMemo } from 'react'
 import { sidebarItems } from 'data/sidebar'
 import { useRouter } from 'next/dist/client/router'
-import { useMemo } from 'react'
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
 
 export const Content = ({ children }) => {
@@ -38,16 +38,13 @@ export const Content = ({ children }) => {
   }, [pathname])
 
   return (
-    <div className="w-full">
-      <header className="flex items-center justify-end px-8 pt-6 pb-2">
-        <Link href="https://cloud.fing.ir/" passHref>
-          <a className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded transition-all duration-100" target="_blank">داشبورد<FiArrowLeft className="inline-block mr-2" /></a>
-        </Link>
-      </header>
+    <div className="min-w-0 w-full max-w-3xl xl:max-w-[40rem] 2xl:max-w-3xl mx-auto">
 
-      <main className="px-8 pb-8 text-justify">
-        {children}
-      </main>
+      <div className="min-w-0 w-full max-w-3xl xl:max-w-[40rem] 2xl:max-w-3xl mx-auto">
+        <article className="leading-relaxed">
+          {children}
+        </article>
+      </div>
 
       <div className="px-8 my-8">
         <div className="flex items-center justify-between mb-8 space-x-4">

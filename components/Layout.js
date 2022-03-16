@@ -1,14 +1,29 @@
-import { Sidebar } from './Sidebar'
+import React from 'react'
 import { Content } from './Content'
 import { useRouter } from 'next/dist/client/router'
 import { ArticleJsonLd, NextSeo } from 'next-seo'
+import { TableOfContent } from './TableOfContent'
 
 export default function Layout({ children, meta }) {
   const router = useRouter()
   const url = `https://docs.fing.ir${router.asPath}`
 
+  const headers = React.Children.toArray(children)
+    .filter(
+      (child) =>
+        child.props?.mdxType && ['h2', 'h3'].includes(child.props.mdxType)
+    )
+    .map((child) => ({
+      url: '#' + child.props.id,
+      depth:
+        (child.props?.mdxType &&
+          parseInt(child.props.mdxType.replace('h', ''), 0)) ??
+        0,
+      text: child.props.children[1],
+    }))
+
   return (
-    <div className="relative flex max-w-6xl min-h-screen mx-auto">
+    <>
       <NextSeo
         title={meta.title}
         description={meta.description}
@@ -32,9 +47,9 @@ export default function Layout({ children, meta }) {
         publisherLogo="https://fing.ir/images/icon.png"
         publisherName="Fing"
       />
-      <Sidebar />
-      <Content>{children}</Content>
-    </div>
+      <Content >{children}</Content>
+      <TableOfContent headers={headers} />
+    </>
   )
 }
 
