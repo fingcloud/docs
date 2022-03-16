@@ -26,7 +26,7 @@ export const Navbar = () => (
 
       <button className="relative p-4 ml-auto mr-2 rounded-lg md:hidden hover:bg-gray-200"><FiMenu /></button>
       <nav className="hidden h-full xl:flex w-60">
-        <div className="items-center hidden space-x-3 space-x-reverse text-blue-500 lg:flex">
+        <div className="items-center hidden space-x-3 space-x-reverse text-blue-600 lg:flex">
           <a href="https://github.com/fingcloud">
             <BsGithub className="w-5 h-5" />
           </a>

@@ -14,7 +14,7 @@ export const Sidebar = () => {
             <dt className="flex pb-1 text-base font-bold md:justify-start sm:justify-center">{item.title}</dt>
             <dd key={index} className="mb-8 border-r border-gray-100">
               {item.pages.map((page, index) => (
-                <Link key={index} href={page.slug} passHref scroll={true}><a className={`flex hover:text-blue-600 text-sm transition-colors py-1 border-r-[3px] pr-4 -mr-0.5 border-transparent hover:border-blue-500 ${router.asPath.split("#")[0] === page.slug ? 'text-blue-500 border-r-2 border-blue-500 font-semibold' : 'text-gray-700'}`}>{page.label}</a></Link>
+                <Link key={index} href={page.slug} passHref scroll={true}><a className={`flex hover:text-blue-600 text-sm transition-colors py-1 border-r-[3px] pr-4 -mr-0.5 hover:border-blue-500 ${router.asPath.split("#")[0] === page.slug ? 'text-blue-500 border-blue-500 font-semibold' : 'text-gray-700 border-transparent'}`}>{page.label}</a></Link>
               ))}
             </dd>
           </dl>

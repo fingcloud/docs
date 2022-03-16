@@ -8,3 +8,13 @@ body {
   direction: rtl;
   scroll-behavior: smooth;
 }
+
+h2::before,
+h3::before,
+h1::before,
+h4::before {
+  content: '';
+  display: block;
+  height: 150px;
+  margin-top: -150px;
+}
