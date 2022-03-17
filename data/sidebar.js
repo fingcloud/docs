@@ -37,11 +37,14 @@ export const sidebarItems = [
       { label: 'NestJs', slug: '/platform/nest' },
       { label: 'Angular', slug: '/platform/angular' },
       { label: 'Gatsby', slug: '/platform/gatsby' },
-      { label: 'Flask', slug: '/platform/flask' },
-      { label: 'Docker', slug: '/platform/docker' },
-      { label: 'Django', slug: '/platform/django' },
-      { label: 'Python', slug: '/platform/python' },
       { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
+      { label: 'Python', slug: '/platform/python' },
+      { label: 'Flask', slug: '/platform/flask' },
+      { label: 'Django', slug: '/platform/django' },
+      { label: 'Php', slug: '/platform/php' },
+      { label: 'Laravel', slug: '/platform/laravel' },
+      { label: 'Docker', slug: '/platform/docker' },
+      { label: 'Dotnetcore', slug: '/platform/dotnetcore' },
     ]
   },
   {
