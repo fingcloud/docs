@@ -21,7 +21,13 @@ const withMDX = require('@next/mdx')({
   options: {
     remarkPlugins: [
       autoSlug,
-      [autolinkHeaddings, { content }],
+      [autolinkHeaddings, {
+        content: (node) => {
+          node.data.hProperties.id = encodeURI(node.data.hProperties.id)
+          node.data.id = encodeURI(node.data.id)
+          return node
+        },
+      }],
       fontmatterPlugin,
     ],
     rehypePlugins: [],
