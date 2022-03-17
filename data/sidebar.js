@@ -44,6 +44,7 @@ export const sidebarItems = [
       { label: 'Php', slug: '/platform/php' },
       { label: 'Laravel', slug: '/platform/laravel' },
       { label: 'Docker', slug: '/platform/docker' },
+      { label: 'Dotnetcore', slug: '/platform/dotnetcore' },
     ]
   },
   {
