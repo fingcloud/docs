@@ -33,21 +33,24 @@ h4::before {
     font-variation-settings: 'wght' 300;
   }
   .font-normal {
-    font-variation-settings: 'wght' 400;
+    font-variation-settings: 'wght' 350;
   }
   .font-medium {
-    font-variation-settings: 'wght' 500;
+    font-variation-settings: 'wght' 400;
   }
   .font-semibold {
-    font-variation-settings: 'wght' 600;
+    font-variation-settings: 'wght' 450;
   }
   .font-bold {
-    font-variation-settings: 'wght' 700;
+    font-variation-settings: 'wght' 500;
   }
   .font-extrabold {
-    font-variation-settings: 'wght' 800;
+    font-variation-settings: 'wght' 550;
   }
   .font-black {
-    font-variation-settings: 'wght' 900;
+    font-variation-settings: 'wght' 600;
+  }
+  strong {
+    font-variation-settings: 'wght' 600;
   }
 }
