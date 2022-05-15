@@ -57,17 +57,15 @@ export const TableOfContent = ({ headers }) => {
       <div className="hidden xl:block fixed top-0 pt-36 pb-16 pl-0.5 w-60 h-full md:text-[13px] right-auto left-[2rem]">
         <p href="#" className="flex items-center text-sm font-semibold transition-colors pb-1 -ml-0.5 mb-1">فهرست مطلب</p>
         <nav className="relative flex flex-col">
-          <div className="absolute right-0 -mr-0.5 top-0 w-[1px] h-full bg-gray-100 origin-top"></div>
+          <div className="absolute right-0 top-0 w-[1px] h-full bg-gray-100 origin-top"></div>
           <ul className="outline-list">
-            {headers?.map((item, index) => {
-              return (
-                <li key={index}>
-                  <Link href={item.url} passHref scroll={true}>
-                    <a className="relative flex hover:text-blue-600 transition-colors py-1 border-r-[2px] pr-4 -mr-0.5 border-transparent hover:border-blue-500 visible toc-item">{item.text}</a>
-                  </Link>
-                </li>
-              )
-            })}
+            {headers?.map((item, index) => (
+              <li key={index} className={`border-r ${item.depth === 3 ? 'mr-4' : item.depth === 4 ? 'mr-8' : ''}`}>
+                <Link href={item.url} passHref scroll={true}>
+                  <a className="relative flex hover:text-blue-600 transition-colors border-transparent py-1 border-r-[2px] pr-4 -mr-0.5 hover:border-blue-500 visible toc-item">{item.text}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
