@@ -10,6 +10,7 @@ export const sidebarItems = [
     title: 'راهنمای شروع سریع',
     pages: [
       { label: 'نصب فینگ', slug: '/quickstart/installation' },
+      { label: 'لاگین در فینگ', slug: '/quickstart/login' },
     ]
   },
 
