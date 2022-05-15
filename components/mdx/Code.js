@@ -1,5 +1,5 @@
 import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/palenight";
+import theme from "prism-react-renderer/themes/nightOwl";
 
 export const Code = ({ children, className }) => {
   const language = className?.replace(/language-/, "") || "";
