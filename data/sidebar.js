@@ -5,27 +5,21 @@ export const sidebarItems = [
       { label: 'معرفی فینگ', slug: '/' },
     ]
   },
+
   {
-    title: 'فینگ CLI',
+    title: 'راهنمای شروع سریع',
     pages: [
-      { label: 'نصب', slug: '/cli/installation' },
-      { label: 'شروع سریع', slug: '/cli/quick-start' },
-      { label: 'دستورات', slug: '/cli/commands' },
+      { label: 'نصب فینگ', slug: '/quickstart/installation' },
+      { label: 'لاگین در فینگ', slug: '/quickstart/login' },
+      { label: 'ساخت برنامه در فینگ', slug: '/quickstart/create-app' },
+      { label: 'اجرای برنامه Node', slug: '/quickstart/node' },
+      { label: 'اجرای برنامه python', slug: '/quickstart/python' },
+      { label: 'اجرای برنامه Go', slug: '/quickstart/golang' },
     ]
   },
+
   {
-    title: 'برنامه‌ها',
-    pages: [
-      { label: 'نمای کلی', slug: '/apps/overview' },
-      { label: 'استقرارها', slug: '/apps/deployments' },
-      { label: 'دامنه‌‌ها', slug: '/apps/domains' },
-      { label: 'متغیرها', slug: '/apps/environment-variables' },
-      { label: 'لاگ‌ها', slug: '/apps/logs' },
-      { label: 'دیسک‌ها', slug: '/apps/disks' },
-    ]
-  },
-  {
-    title: 'پلتفرم',
+    title: 'پلتفرم‌‌ها',
     pages: [
       { label: 'NodeJs', slug: '/platform/node' },
       { label: 'Static', slug: '/platform/static' },
@@ -58,22 +52,28 @@ export const sidebarItems = [
     ]
   },
   {
-    title: 'سرویس‌ها',
+    title: 'منابع',
     pages: [
-      { label: 'Nginx', slug: '/service/nginx' },
-      { label: 'Gitea', slug: '/service/gitea' },
-      { label: 'Wordpress', slug: '/service/wordpress' },
-      { label: 'Rapidleech', slug: '/service/rapidleech' },
-      { label: 'Filestash', slug: '/service/filestash' },
-      { label: 'Grafana', slug: '/service/grafana' },
-      { label: 'Chrome', slug: '/service/chrome' },
-      { label: 'Joomla', slug: '/service/joomla' },
-      { label: 'Prestashop', slug: '/service/prestashop' },
-      { label: 'Ghost', slug: '/service/ghost' },
-      { label: 'Parse', slug: '/service/parse' },
-      { label: 'Prometheus', slug: '/service/prometheus' },
-      { label: 'Minio', slug: '/service/minio' },
-      { label: 'Registry', slug: '/service/registry' },
+      { label: 'دستورات', slug: '/reference/commands' },
     ]
-  },
+  }
+  //   {
+  //     title: 'سرویس‌ها',
+  //     pages: [
+  //       { label: 'Nginx', slug: '/service/nginx' },
+  //       { label: 'Gitea', slug: '/service/gitea' },
+  //       { label: 'Wordpress', slug: '/service/wordpress' },
+  //       { label: 'Rapidleech', slug: '/service/rapidleech' },
+  //       { label: 'Filestash', slug: '/service/filestash' },
+  //       { label: 'Grafana', slug: '/service/grafana' },
+  //       { label: 'Chrome', slug: '/service/chrome' },
+  //       { label: 'Joomla', slug: '/service/joomla' },
+  //       { label: 'Prestashop', slug: '/service/prestashop' },
+  //       { label: 'Ghost', slug: '/service/ghost' },
+  //       { label: 'Parse', slug: '/service/parse' },
+  //       { label: 'Prometheus', slug: '/service/prometheus' },
+  //       { label: 'Minio', slug: '/service/minio' },
+  //       { label: 'Registry', slug: '/service/registry' },
+  //     ]
+  //   },
 ]
