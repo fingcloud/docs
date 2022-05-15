@@ -6,7 +6,7 @@ export const Code = ({ children, className }) => {
   return (
     <Highlight {...defaultProps} theme={theme} code={children.trim()} language={language} >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre dir="ltr" className={`${className} overflow-auto my-4 p-4 rounded-md text-sm`} style={style} >
+        <pre dir="ltr" className={`${className} overflow-auto my-4 p-5 rounded-xl text-sm`} style={style} >
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
