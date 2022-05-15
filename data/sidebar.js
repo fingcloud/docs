@@ -13,6 +13,7 @@ export const sidebarItems = [
       { label: 'لاگین در فینگ', slug: '/quickstart/login' },
       { label: 'ساخت برنامه در فینگ', slug: '/quickstart/create-app' },
       { label: 'اجرای برنامه Node', slug: '/quickstart/node' },
+      { label: 'اجرای برنامه python', slug: '/quickstart/python' },
     ]
   },
 
