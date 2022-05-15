@@ -1,0 +1,97 @@
+---
+title: NodeJS
+description: چگونه برنامه Node خود را بر روی سکوی ابری فینگ مستقر(deploy) کنیم؟
+---
+
+import { PlatformHead, Platform } from "components/PlatformHead";
+
+<Platform>
+  <PlatformHead title="برنامه‌های ‌‌NodeJs" icon="nodejs/nodejs-original.svg" />
+</Platform>
+
+# ساخت، استقرار و اجرای یک برنامه Node
+
+در این راهنما نحوه‌ی اجرای یک برنامه **Node** را در **فینگ** یاد خواهیم گرفت.
+
+## برنامه helloworld
+
+برای ایجاد یک برنامه **node** ابتدا باید دستور `npm init` و یا `yarn init` را اجرا کرده تا تنظیمات اولیه‌ی نود را داشته باشیم.
+
+```javascript
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+```
+
+سپس فایلی با نام `index.js` ایجاد می‌کنیم تا کد خود را داخل آن قرار دهیم و بعد از آن دستور `npm install express --save` را اجرا می‌کنیم تا پکیج مورد نظر نصب شود.
+
+```javascript
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get(["/", "/:name"], (req, res) => {
+  greeting = "<h1>Hello From Node on Fing!</h1>";
+  name = req.params["name"];
+  if (name) {
+    res.send(greeting + "</br>and hello to " + name);
+  } else {
+    res.send(greeting);
+  }
+});
+
+app.listen(port, () =>
+  console.log(`HelloWorld app listening on port ${port}!`)
+);
+```
+
+### اجرای برنامه
+
+برای شروع برنامه، دستور `node index.js` را اجرا می‌کنیم.
+
+```bash
+$ node index.js
+
+HelloWorld app listening on port 3000!
+```
+
+اکنون `localhost:3000` را در مرورگر خود باز کرده تا مطمئن شویم برنامه **node** ما کار می‌کند.
+
+- بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
+
+### ایجاد فایل fing.yaml
+
+در ریشه اصلی پروژه خود، فایلی را با نام `fing.yaml` ایجاد می‌کنیم و اطلاعات پایه‌ای برنامه‌ی خود را در آن قرار می‌دهیم. که می‌توان نام برنامه، پلتفرمی که از آن استفاده می‌کنیم و همچنین پورتی که برنامه‌ی ما بر روی آن `listen` می‌کند را مشخص کنیم.
+
+```yaml
+app: "hellofing"
+platform: "node"
+port: 3000
+```
+
+## نصب فینگ cli و لاگین در آن
+
+برنامه‌ی **node** ما آماده‌ی استقرار بر روی **سکوی ابری فینگ** می‌باشد و این بدین معناست که ما برای مدیریت برنامه‌های خود به **فینگ cli** نیاز داریم. اگر هنوز آن را نصب نکرده‌اید به [راهنمای نصب](/quickstart/installation) ما بروید و بعد از نصب، در آن [لاگین](/quickstart/login) کنید.
+
+### دستور استقرار
+
+بعد از وارد شدن در فینگ cli در مسیر اصلی پروژه‌ی خود، دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود.
+
+```bash
+$ fing up
+```
+
+### مشاهده خروجی
+
+بعد از انجام مراحل قبلی و اولین استقرار، فینگ برای برنامه‌ی ما زیر دامنه‌ای اختصاص می‌دهد که می‌توانیم از طریق آن از صحت استقرار برنامه خود در سرویس **فینگ** مطمئن شویم.
+
+زیر دامنه‌ی ما به این صورت خواهد بود: `https://hellofing.onfing.ir`

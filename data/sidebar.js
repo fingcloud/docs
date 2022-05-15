@@ -12,6 +12,7 @@ export const sidebarItems = [
       { label: 'نصب فینگ', slug: '/quickstart/installation' },
       { label: 'لاگین در فینگ', slug: '/quickstart/login' },
       { label: 'ساخت برنامه در فینگ', slug: '/quickstart/create-app' },
+      { label: 'اجرای برنامه Node', slug: '/quickstart/node' },
     ]
   },
 
