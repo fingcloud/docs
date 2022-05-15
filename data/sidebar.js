@@ -54,7 +54,7 @@ export const sidebarItems = [
   {
     title: 'منابع',
     pages: [
-      { label: 'دستورات', slug: '/reference/commands.mdx' },
+      { label: 'دستورات', slug: '/reference/commands' },
     ]
   }
   //   {
