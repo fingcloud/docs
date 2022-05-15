@@ -14,6 +14,7 @@ export const sidebarItems = [
       { label: 'ساخت برنامه در فینگ', slug: '/quickstart/create-app' },
       { label: 'اجرای برنامه Node', slug: '/quickstart/node' },
       { label: 'اجرای برنامه python', slug: '/quickstart/python' },
+      { label: 'اجرای برنامه Go', slug: '/quickstart/golang' },
     ]
   },
 
