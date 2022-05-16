@@ -52,28 +52,34 @@ export const sidebarItems = [
     ]
   },
   {
-    title: 'منابع',
+    title: 'سرویس‌ها',
     pages: [
-      { label: 'دستورات', slug: '/reference/commands' },
+      { label: 'Nginx', slug: '/service/nginx' },
+      { label: 'Gitea', slug: '/service/gitea' },
+      { label: 'Wordpress', slug: '/service/wordpress' },
+      { label: 'Rapidleech', slug: '/service/rapidleech' },
+      { label: 'Filestash', slug: '/service/filestash' },
+      { label: 'Grafana', slug: '/service/grafana' },
+      { label: 'Chrome', slug: '/service/chrome' },
+      { label: 'Joomla', slug: '/service/joomla' },
+      { label: 'Prestashop', slug: '/service/prestashop' },
+      { label: 'Ghost', slug: '/service/ghost' },
+      { label: 'Parse', slug: '/service/parse' },
+      { label: 'Prometheus', slug: '/service/prometheus' },
+      { label: 'Minio', slug: '/service/minio' },
+      { label: 'Registry', slug: '/service/registry' },
     ]
   },
-    {
-      title: 'سرویس‌ها',
-      pages: [
-        { label: 'Nginx', slug: '/service/nginx' },
-        { label: 'Gitea', slug: '/service/gitea' },
-        { label: 'Wordpress', slug: '/service/wordpress' },
-        { label: 'Rapidleech', slug: '/service/rapidleech' },
-        { label: 'Filestash', slug: '/service/filestash' },
-        { label: 'Grafana', slug: '/service/grafana' },
-        { label: 'Chrome', slug: '/service/chrome' },
-        { label: 'Joomla', slug: '/service/joomla' },
-        { label: 'Prestashop', slug: '/service/prestashop' },
-        { label: 'Ghost', slug: '/service/ghost' },
-        { label: 'Parse', slug: '/service/parse' },
-        { label: 'Prometheus', slug: '/service/prometheus' },
-        { label: 'Minio', slug: '/service/minio' },
-        { label: 'Registry', slug: '/service/registry' },
-      ]
-    },
+  {
+    title: 'منابع',
+    pages: [
+      { label: 'نمای‌ کلی', slug: '/references/overview' },
+      { label: 'استقرارها', slug: '/references/deployments' },
+      { label: 'دامنه‌ها', slug: '/references/domains' },
+      { label: 'متغیرها', slug: '/references/environment-variables' },
+      { label: 'لاگ‌ها', slug: '/references/logs' },
+      { label: 'دیسک‌ها', slug: '/references/disks' },
+      { label: 'دستورات', slug: '/references/commands' },
+    ]
+  },
 ]
