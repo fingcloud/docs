@@ -39,10 +39,13 @@ export const TableOfContent = ({ headers }) => {
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && 1 <= entry.intersectionRatio) {
-          headings.find(h => h.getAttribute('href') === entry.target.getAttribute('href'))?.visible = true
-        } else {
-          headings.find(h => h.getAttribute('href') === entry.target.getAttribute('href'))?.visible = false
+        const headingIndex = headings.findIndex(item => h.getAttribute('href') === entry.target.getAttribute('href'))
+        if (headingIndex !== -1) {
+          if (entry.isIntersecting && 1 <= entry.intersectionRatio) {
+            headings[headingIndex].visible = true
+          } else {
+            headings[headingIndex].visible = false
+          }
         }
         highlightFirstActive()
       })
