@@ -23,6 +23,7 @@ export const sidebarItems = [
     pages: [
       { label: 'NodeJs', slug: '/platform/node' },
       { label: 'Python', slug: '/platform/python' },
+      { label: 'Golang', slug: '/platform/golang' },
       { label: 'Static', slug: '/platform/static' },
       { label: 'React', slug: '/platform/react' },
       { label: 'VueJs', slug: '/platform/vue' },
