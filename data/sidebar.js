@@ -22,6 +22,7 @@ export const sidebarItems = [
     title: 'پلتفرم‌‌ها',
     pages: [
       { label: 'NodeJs', slug: '/platform/node' },
+      { label: 'Python', slug: '/platform/python' },
       { label: 'Static', slug: '/platform/static' },
       { label: 'React', slug: '/platform/react' },
       { label: 'VueJs', slug: '/platform/vue' },
@@ -32,7 +33,6 @@ export const sidebarItems = [
       { label: 'Angular', slug: '/platform/angular' },
       { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
-      { label: 'Python', slug: '/platform/python' },
       { label: 'Flask', slug: '/platform/flask' },
       { label: 'Django', slug: '/platform/django' },
       { label: 'Php', slug: '/platform/php' },
