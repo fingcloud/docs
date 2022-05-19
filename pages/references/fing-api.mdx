@@ -77,8 +77,8 @@ GET: /v1/apps
 [
   {
     "id": 30846,
-    "name": "app-name-2",
-    "label": "app-name-2",
+    "name": "app-name",
+    "label": "app-name",
     "platform": "next",
     "package": "",
     "kind": "web",
@@ -88,7 +88,7 @@ GET: /v1/apps
     "status": "running",
     "image": "",
     "resources": { "cpu": 0.15, "memory": 0.2, "storage": 2 },
-    "url": "https://app-name-2.onfing.ir",
+    "url": "https://app-name.onfing.ir",
     "created_at": "2022-05-19T07:53:24.000Z",
     "hourly_price": 261,
     "monthly_price": 190000,
@@ -96,69 +96,12 @@ GET: /v1/apps
     "domains": [
       {
         "id": 2311,
-        "name": "app-name-2.onfing.ir",
+        "name": "app-name.onfing.ir",
         "valid": true,
         "tls": true,
         "only_tls": true,
         "disabled": false,
         "records": []
-      }
-    ]
-  },
-  {
-    "id": 32433,
-    "name": "app-name-1",
-    "label": "server",
-    "platform": "node",
-    "package": "",
-    "kind": "web",
-    "region": "iran",
-    "port": 3000,
-    "status": "running",
-    "image": "registry.fing.ir/app-name-1:v15-rpp7949ficav",
-    "resources": { "cpu": 0.25, "memory": 0.25, "storage": 5 },
-    "url": "https://app-name-1.onfing.ir",
-    "created_at": "2021-06-21T06:07:48.000Z",
-    "deployed_at": "2022-05-21T08:31:18.000Z",
-    "hourly_price": 446,
-    "monthly_price": 325000,
-    "env": [
-      {
-        "key": "YOUR_ENV",
-        "value": "env_value"
-      }
-    ],
-    "domains": [
-      {
-        "id": 237,
-        "name": "app-name-1.onfing.ir",
-        "valid": true,
-        "tls": true,
-        "only_tls": true,
-        "disabled": false,
-        "records": []
-      },
-      {
-        "id": 2219,
-        "name": "domain-name",
-        "valid": true,
-        "tls": true,
-        "only_tls": true,
-        "disabled": false,
-        "records": [
-          {
-            "kind": "CNAME",
-            "name": "domain-name",
-            "value": "cname.fing.ir",
-            "verified": true
-          },
-          {
-            "kind": "TXT",
-            "name": "fing-secret.domain-name",
-            "value": "value",
-            "verified": true
-          }
-        ]
       }
     ]
   }
