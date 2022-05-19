@@ -18,6 +18,8 @@ import { PlatformHead, Platform } from "components/PlatformHead";
 برای ایجاد یک برنامه **node** ابتدا باید دستور `npm init` و یا `yarn init` را اجرا کرده تا تنظیمات اولیه‌ی نود را داشته باشیم.
 
 ```javascript
+// package.json
+
 {
   "name": "helloworld",
   "version": "1.0.0",
@@ -35,6 +37,8 @@ import { PlatformHead, Platform } from "components/PlatformHead";
 سپس فایلی با نام `index.js` ایجاد می‌کنیم تا کد خود را داخل آن قرار دهیم و بعد از آن دستور `npm install express --save` را اجرا می‌کنیم تا پکیج مورد نظر نصب شود.
 
 ```javascript
+// index.js
+
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
@@ -68,7 +72,7 @@ HelloWorld app listening on port 3000!
 
 - بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
 
-## استقرار برنامه در فینگ
+## استقرار برنامه node در فینگ
 
 برای استقرار برنامه‌ی خود بر روی سکوی ابری فینگ، باید یک برنامه را ایجاد کنید. برای اطلاع از چگونگی ایجاد آن، به بخش [ساخت برنامه در فینگ](/quickstart/create-app) مراجعه کنید.
 
@@ -77,6 +81,8 @@ HelloWorld app listening on port 3000!
 در ریشه اصلی پروژه خود، فایلی را با نام `fing.yaml` ایجاد می‌کنیم و اطلاعات پایه‌ای برنامه‌ی خود را در آن قرار می‌دهیم. که می‌توان نام برنامه، پلتفرمی که از آن استفاده می‌کنیم و همچنین پورتی که برنامه‌ی ما بر روی آن `listen` می‌کند را مشخص کنیم.
 
 ```yaml
+# fing.yaml
+
 app: "helloworld"
 platform: "node"
 port: 3000

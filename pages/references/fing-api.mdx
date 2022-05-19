@@ -1,0 +1,299 @@
+---
+title: API
+description: چگونه از API فینگ استفاده کنیم؟
+---
+
+# نمای کلی
+
+ساختار API به توسعه دهندگان این امکان را می دهد تا **فینگ** را با سایر خدمات خودکار، گسترش و ترکیب کنند. می‌توانید از **API فینگ** برای **ایجاد**، **لیست**، **دیپلوی**، **روشن** و ... **برنامه‌ها** ، برای **ساخت**، **mount** و **unmount** کردن **دیسک‌ها** و همچنین برای مشاهده لیست **پلن‌ها** و انجام کارهای دیگری که قبلاً فقط با **فینگ CLI** یا **داشبورد** انجام می‌شد، استفاده کنید.
+
+## احراز هویت
+
+برای استفاده کردن از **API فینگ** باید هر درخواست دارای توکن** احراز هویت** باشد که با کلید `Authorization: Bearer {token}` ارسال می‌شود. برای این منظور از [داشبورد](https://cloud.fing.ir/account) برنامه، قسمت **پروفایل** خود، گزینه‌ی **حساب کاربری** را انتخاب کرده و بر روی ** ایجاد توکن جدید** کلیک نمایید. سپس نامی برای **توکن** خود وارد کنید.
+
+![create token](/images/create-token.jpg)
+
+برای استفاده از **توکن** ساخته شده در هر ** endpoint** ، به روش زیر عمل کنید:
+
+```json
+"Accept": "application/json"
+"Authorization": `Bearer {token}`
+```
+
+## استفاده از توکن در مسیرهای
+
+برای استفاده از **API فینگ** باید درخواست‌‌های شما به این آدرس باشد:
+`https://cloud.fing.ir`
+
+### برنامه‌ها
+
+برای اینکه بتوانید در مسیرهای مختلف **برنامه** از **API فینگ** استفاده کنید، به روش زیر انجام دهید:
+
+#### ایجاد برنامه
+
+```
+POST: /v1/apps
+```
+
+- ورودی:
+
+```json
+{
+  "label": "app-name",
+  "plan_id": "2",
+  "platform": "node",
+  "region": "iran"
+}
+```
+
+- خروجی:
+
+```json
+{
+  "id": 30846,
+  "name": "app-name",
+  "label": "app-name",
+  "platform": "node",
+  "package": "",
+  "port": 80,
+  "kind": "web",
+  "region": "iran",
+  "cpu": 0.15,
+  "memory": 0.2,
+  "storage": 2,
+  "created_at": "2022-05-19T07:53:24.000Z"
+}
+```
+
+#### لیست برنامه
+
+```
+GET: /v1/apps
+```
+
+- خروجی:
+
+```json
+[
+  {
+    "id": 30846,
+    "name": "app-name-2",
+    "label": "app-name-2",
+    "platform": "next",
+    "package": "",
+    "kind": "web",
+    "region": "iran",
+    "port": 80,
+    "published_ports": [39066],
+    "status": "running",
+    "image": "",
+    "resources": { "cpu": 0.15, "memory": 0.2, "storage": 2 },
+    "url": "https://app-name-2.onfing.ir",
+    "created_at": "2022-05-19T07:53:24.000Z",
+    "hourly_price": 261,
+    "monthly_price": 190000,
+    "env": [],
+    "domains": [
+      {
+        "id": 2311,
+        "name": "app-name-2.onfing.ir",
+        "valid": true,
+        "tls": true,
+        "only_tls": true,
+        "disabled": false,
+        "records": []
+      }
+    ]
+  },
+  {
+    "id": 32433,
+    "name": "app-name-1",
+    "label": "server",
+    "platform": "node",
+    "package": "",
+    "kind": "web",
+    "region": "iran",
+    "port": 3000,
+    "status": "running",
+    "image": "registry.fing.ir/app-name-1:v15-rpp7949ficav",
+    "resources": { "cpu": 0.25, "memory": 0.25, "storage": 5 },
+    "url": "https://app-name-1.onfing.ir",
+    "created_at": "2021-06-21T06:07:48.000Z",
+    "deployed_at": "2022-05-21T08:31:18.000Z",
+    "hourly_price": 446,
+    "monthly_price": 325000,
+    "env": [
+      {
+        "key": "YOUR_ENV",
+        "value": "env_value"
+      }
+    ],
+    "domains": [
+      {
+        "id": 237,
+        "name": "app-name-1.onfing.ir",
+        "valid": true,
+        "tls": true,
+        "only_tls": true,
+        "disabled": false,
+        "records": []
+      },
+      {
+        "id": 2219,
+        "name": "domain-name",
+        "valid": true,
+        "tls": true,
+        "only_tls": true,
+        "disabled": false,
+        "records": [
+          {
+            "kind": "CNAME",
+            "name": "domain-name",
+            "value": "cname.fing.ir",
+            "verified": true
+          },
+          {
+            "kind": "TXT",
+            "name": "fing-secret.domain-name",
+            "value": "value",
+            "verified": true
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+#### حذف برنامه
+
+```
+DELETE: /v1/apps/{app-name}
+```
+
+- خروجی:
+```json
+{}
+```
+
+#### تغییر پلن برنامه
+
+```
+POST: /v1/apps/{app-name}/change-plan
+```
+
+- ورودی:
+```json
+{
+  "plan_id":2,
+  "expand_storage":true // در صورتی که قصد افزایش هارد برنامه را دارید
+}
+```
+
+- خروجی:
+```json
+{}
+```
+
+#### استارت برنامه
+
+```
+POST: /v1/apps/{app-name}/start
+```
+
+- خروجی:
+
+```json
+{}
+```
+
+#### خاموش کردن برنامه
+
+```
+POST: /v1/apps/{app-name}/shutdown
+```
+
+- خروجی:
+
+```json
+{}
+```
+
+#### ری‌استارت کردن برنامه
+
+```
+POST: /v1/apps/{app-name}/restart
+```
+- خروجی:
+
+```json
+{}
+```
+
+####
+
+#### دیپلوی برنامه
+
+```
+POST: /v1/apps/{app-name}/deployments
+```
+
+- ورودی:
+
+```json
+{
+  "type":  [] // یکی از این تایپ‌‌ها باشد: "integration", "url", "image",
+  "files": [],
+  "config": {}
+}
+```
+
+- خروجی:
+
+```json
+{
+  "id": "3084",
+  "platform": "node",
+  "image": "registry.fing.ir/app-name:v108-2la9a098m2ks",
+  "port": "3000",
+  "started_at": "2022-05-19T08:53:04.000Z",
+  "finished_at": "2022-05-19T08:56:14.000Z",
+  "status": "finished",
+  "url": "",
+  "created_at": "2022-05-19T08:45:24.000Z"
+}
+```
+
+### دیسک‌ها
+
+می‌توانید با استفاده از **API فینگ** به مسیرهای **دیسک‌ها** دسترسی داشته باشید:
+
+#### ساخت دیسک‌
+
+```
+POST: /v1/apps/{app-name/disks
+```
+
+- ورودی:
+
+```json
+{
+  "name":"disk-name"
+}
+```
+
+- خروجی:
+
+```json
+[
+  {
+    "id": 8592,
+    "name": "disk-name",
+    "destination": "",
+    "mounted": false,
+    "used": 4096,
+    "created_at": "2022-05-19T09:35:22.000Z",
+    "ftp": {}
+  }
+]
+```
