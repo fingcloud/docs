@@ -53,8 +53,8 @@ export const sidebarItems = [
   {
     title: 'سرویس‌ها',
     pages: [
-      { label: 'Gitea', slug: '/service/gitea' },
-      { label: 'Minio', slug: '/service/minio' },
+      { label: 'Gitea', slug: '/services/gitea' },
+      { label: 'Minio', slug: '/services/minio' },
     ]
   },
   {
