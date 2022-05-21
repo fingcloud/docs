@@ -10,7 +10,7 @@ import { Notice } from "components/Notice";
   <PlatformHead title="برنامه‌های python" icon="python/python-original.svg" />
 </Platform>
 
-# پشتیبانی فینگ از Python
+# اجرای پروژه‌های Python در فینگ
 
 در این سند نحوه‌ی عملکرد کلی **فینگ** در رابطه با شناسایی و اجرای برنامه‌های **Python** را توضیح می‌دهد.
 برای کسب اطلاعات بیشتر در مورد چگونگی استقرار برنامه پایتون، به بخش [اجرای برنامه Python](/quickstart/python) مراجعه نمایید.
@@ -45,7 +45,6 @@ $ fing up
 
 ```yaml
 # fing.yaml
-
 ...
 build:
   python_version: 3.8
@@ -73,7 +72,5 @@ build:
 در ریشه اصلی پروژه خود فایلی با نام `Procfile` ایجاد کنید و دستورات برنامه‌ی خود را داخل آن قرار دهید. **فینگ** بر اساس همان دستور برنامه شما را جهت استقرار آماده سازی می‌کند.
 
 ```Procfile
-// Procfile
-
 web: python3 main.py
 ```
