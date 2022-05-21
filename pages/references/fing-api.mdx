@@ -115,6 +115,7 @@ DELETE: /v1/apps/{app-name}
 ```
 
 - خروجی:
+
 ```json
 {}
 ```
@@ -126,14 +127,16 @@ POST: /v1/apps/{app-name}/change-plan
 ```
 
 - ورودی:
+
 ```json
 {
-  "plan_id":2,
-  "expand_storage":true // در صورتی که قصد افزایش هارد برنامه را دارید
+  "plan_id": 2,
+  "expand_storage": true // در صورتی که قصد افزایش هارد برنامه را دارید
 }
 ```
 
 - خروجی:
+
 ```json
 {}
 ```
@@ -167,6 +170,7 @@ POST: /v1/apps/{app-name}/shutdown
 ```
 POST: /v1/apps/{app-name}/restart
 ```
+
 - خروجی:
 
 ```json
@@ -207,6 +211,76 @@ POST: /v1/apps/{app-name}/deployments
 }
 ```
 
+### استقرار‌ها
+
+می‌توانید با **فینگ API** لیست استقرارهای برنامه خود را مشاهده کنید.
+
+#### لیست استفرار
+
+```
+GET: /v1/apps/{app-name}/deployments
+```
+
+- خروجی:
+
+```json
+[
+  {
+    "id": "3084",
+    "platform": "node",
+    "image": "registry.fing.ir/app-name:v108-2la9a098m2ks",
+    "port": "3000",
+    "started_at": "2022-05-19T08:53:04.000Z",
+    "finished_at": "2022-05-19T08:56:14.000Z",
+    "status": "finished",
+    "url": "https://app-name.onfing.ir",
+    "created_at": "2022-05-19T08:45:24.000Z"
+  }
+]
+```
+
+#### لاگ‌های استفرار
+
+```
+GET: /v1/apps/{app-name}/deployments/{deployment-id}
+```
+
+-  خروجی:
+
+```json
+{
+  "deployment": {
+    "id": "3084",
+    "platform": "node",
+    "image": "registry.fing.ir/app-name:v108-2la9a098m2ks",
+    "port": "3000",
+    "started_at": "2022-05-19T08:53:04.000Z",
+    "finished_at": "2022-05-19T08:56:14.000Z",
+    "status": "finished",
+    "url": "https://app-name.onfing.ir",
+    "created_at": "2022-05-19T08:45:24.000Z"
+  },
+  "logs": [
+    {
+      "id": 108864,
+      "deployment_id": 3084,
+      "level": "info",
+      "message": "# Executing 12 build trigger",
+      "created_at": "2022-05-19T08:46:14.000Z",
+      "updated_at": "2022-05-19T08:46:14.000Z"
+    },
+    {
+      "id": 108872,
+      "deployment_id": 3048,
+      "level": "info",
+      "message": "[1;32m==> Installing packages using 'yarn install'[0m",
+      "created_at": "2022-05-19T08:49:12.000Z",
+      "updated_at": "2022-05-19T08:49:12.000Z"
+    }
+  ]
+}
+```
+
 ### دیسک‌ها
 
 می‌توانید با استفاده از **API فینگ** به مسیرهای **دیسک‌ها** دسترسی داشته باشید:
@@ -214,14 +288,14 @@ POST: /v1/apps/{app-name}/deployments
 #### ساخت دیسک‌
 
 ```
-POST: /v1/apps/{app-name/disks
+POST: /v1/apps/{app-name}/disks
 ```
 
 - ورودی:
 
 ```json
 {
-  "name":"disk-name"
+  "name": "disk-name"
 }
 ```
 
@@ -237,6 +311,132 @@ POST: /v1/apps/{app-name/disks
     "used": 4096,
     "created_at": "2022-05-19T09:35:22.000Z",
     "ftp": {}
+  }
+]
+```
+
+#### لیست دیسک‌ها
+
+```
+GET: /v1/apps/{app-name}/disks
+```
+
+- خروجی:
+
+```json
+[
+  {
+    "id": 8592,
+    "name": "disk-name",
+    "destination": "/test/123",
+    "mounted": false,
+    "used": 4096,
+    "created_at": "2022-02-22T10:45:08.000Z",
+    "ftp": {
+      "id": 70377,
+      "disk_id": 8592,
+      "username": "small_queen_IxLLm",
+      "password": "password",
+      "hostname": "ftp.fing.ir",
+      "port": "2022",
+      "created_at": "2022-02-25T11:35:18.000Z"
+    }
+  }
+]
+```
+
+#### mount کردن دیسک‌
+
+```
+POST: /v1/apps/{app-name}/disks/{disk-id}/mount
+```
+
+- خروجی:
+
+```json
+{}
+```
+
+#### unmount کردن دیسک‌
+
+```
+POST: /v1/apps/{app-name}/disks/{disk-id}/unmount
+```
+
+- خروجی:
+
+```json
+{}
+```
+
+#### حذف دیسک‌
+
+```
+POST: /v1/apps/{app-name/disks/{disk-id}
+```
+
+- خروجی:
+
+```json
+{}
+```
+
+### پلن‌ها
+
+**فینگ API** این امکان را می‌دهد که بتوانید لیست پلن‌های موجود در فینگ را مشاهد نمایید.
+
+```
+GET: /v1/plans
+```
+
+- خروجی:
+
+```json
+[
+  {
+    "id": 2,
+    "region": "iran",
+    "name": "micro",
+    "cpu": 0.15,
+    "memory": 0.2,
+    "storage": 2,
+    "available": true,
+    "sort": 2,
+    "created_at": "2022-01-10T13:40:05.000Z",
+    "updated_at": "2022-05-11T19:02:39.000Z",
+    "hint": "مناسب برای برنامه‌های سبک مانند Go",
+    "hourly_price": 261,
+    "monthly_price": 190000
+  },
+  {
+    "id": 4,
+    "region": "iran",
+    "name": "small",
+    "cpu": 0.5,
+    "memory": 1,
+    "storage": 10,
+    "available": true,
+    "sort": 4,
+    "created_at": "2022-01-10T13:40:05.000Z",
+    "updated_at": "2022-03-15T13:22:35.000Z",
+    "hint": "مناسب برنامه‌های نسبتا بزرگ",
+    "hourly_price": 1096,
+    "monthly_price": 800000
+  },
+  {
+    "id": 6,
+    "region": "iran",
+    "name": "large",
+    "cpu": 2,
+    "memory": 4,
+    "storage": 40,
+    "available": true,
+    "sort": 6,
+    "created_at": "2022-01-10T13:40:05.000Z",
+    "updated_at": "2022-03-15T13:23:14.000Z",
+    "hint": "مناسبت همه پلتفورم‌ها",
+    "hourly_price": 4384,
+    "monthly_price": 3200000
   }
 ]
 ```
