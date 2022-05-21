@@ -5,14 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "yarn cache-pages && next-sitemap",
+    "cache-pages": "node lib/cache-pages.js",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.2",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^12.0.7",
-    "gray-matter": "^4.0.3",
+    "fuse.js": "^6.6.2",
+    "lodash": "^4.17.21",
     "next": "^12.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-seo": "^4.26.0",
@@ -30,6 +33,7 @@
     "autoprefixer": "^10.4.2",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
+    "gray-matter": "^4.0.3",
     "next-sitemap": "^1.6.203",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
