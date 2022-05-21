@@ -9,51 +9,9 @@ description: نحوه‌ی لاگین کردن در فینگ CLI
 
 ## حساب فینگ دارید؟
 
-اگر از قبل یک حساب کاربری در **فینگ** دارید با اجرای دستور زیر می‌توانید به **فینگ CLI** وارد شوید.
+اگر از قبل یک حساب کاربری در **فینگ** دارید می‌توانید با دو روش زیر به **فینگ CLI** وارد شوید:
 
-```bash
-$ fing auth login -u [email]  -p [password]
-Successfully logged in.
-```
-
-### دستور fing auth
-
-فینگ این امکان را به شما می‌دهد که با استفاده از دستور `fing auth` بتوانید لیست اکانت‌ها، ورود و خروج از حساب و همچنین بین اکانت‌‌های خود سوئیچ شوید.
-
-#### use
-
-با استفاده از دستور `fing auth use` امکان سوئیچ شدن بین اکانت‌‌های لاگین شده‌ی شما فراهم می‌شود.
-
-```bash
-$ fing auth use
-? select account  [Use arrows to move, type to filter]
-> example@gmail.com
-  my.emailname@gmail.com
-
-```
-
-#### list
-
-با دستور `fing auth ls` اکانت‌‌هایی که در **فینگ CLI** لاگین کرده‌اید را می‌توانید مشاهده کرده و از فعال بودن هر یک اطلاع پیدا کنید.
-
-```bash
-$ fing auth ls
-EMAIL                        STATUS    LOGIN AT              LAST USED AT
-example@gmail.com            -         -                     about 1 hour ago
-my.emailname@gmail.com   ACTIVE    about 3 minutes ago   less than a minute ago
-
-```
-
-#### logout
-
-با اجرای دستور `fing auth logout` از حساب لاگین شده خود در **فینگ‌ CLI** خارج خواهید شد.
-
-```bash
-$ fing auth logout
-Logged out my.emailname@gmail.com
-```
-
-### لاگین با browser
+### لاگین با مرورگر
 
 با کمک دستور `fing login --browser` می‌توانید بدونه وارد کردن **ایمیل** و **رمز عبور** خود در **فینگ ‌CLI** لاگین کنید.
 
@@ -67,7 +25,7 @@ $  fing login --browser
 
 ![choose account](/images/cli-browser-choose-account.jpg)
 
-بعداز انتخاب اکانت مورد نظر، به صفحه‌ای هدایت می‌شوید که با کلیک کردن بر روی گزینه‌ی **به cli دسترسی بده** به فینگ CLI اجازه بدهید تا به حساب کاربری شما دسترسی داشته باشد.
+بعداز انتخاب حساب مورد نظر، به صفحه‌ای هدایت می‌شوید که با کلیک کردن بر روی گزینه‌ی **به cli دسترسی بده** به **فینگ CLI** اجازه بدهید تا به حساب کاربری شما دسترسی داشته باشد.
 
 ![choose account](/images/cli-browser-access.jpg)
 
@@ -79,6 +37,32 @@ $ fing login --browser
 ✓ Authentication OK
 Successfully logged in.
 Session saved
+```
+
+### لاگین با خط فرمان
+
+با وارد کردن دستور `fing auth login` این امکان را دارید که اکانت‌‌‌های ساخته شده خود در **سکوی ابری فینگ** را به **فینگ CLI** اضافه نمایید.
+
+```bash
+$ fing auth login -u [email]  -p [password]
+Successfully logged in.
+```
+
+- همچنین شما این امکان را دارید که بدون استفاده از دستور `auth`، و تنها با وارد کردن دستور `fing login` در **فینگ CLI** لاگین کنید.
+
+```bash
+$ fing login -u [email]  -p [password]
+```
+
+با وارد کردن **ایمیل** و **رمز عبور** خود، وارد حساب کاربری‌تان شوید.
+
+- برای آگاهی از دیگر دستورات مربوط به **حساب کاربری** در **فینگ CLI** به بخش [دستورات](/refrences/commands) مراجعه کنید.
+- برای مدیریت حساب کاربری خود از طریق **داشبورد** به صفحه [ورود به فینگ](https://cloud.fing.ir/login) مراجعه کنید.
+
+
+```bash
+$ fing auth login -u [email]  -p [password]
+Successfully logged in.
 ```
 
 ## حساب فینگ ندارید؟
