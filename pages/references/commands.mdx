@@ -7,43 +7,105 @@ import { Notice } from "components/Notice";
 
 # دستورات
 
-## deploy
+در این مستند شما با دستورهای موجود در **فینگ CLI** آشنا خواهید شد.
+## مدیریت حساب کاربری
 
-از دستور `fing up` برای استقرار برنامه‌ها استفاده می‌شود. برای اجرای آن یا باید در مسیر فعلی پروژه باشید و یا مسیر پروژه مورد نظر را به آن ارائه دهید.
+**فینگ CLI** این امکان را به شما می‌دهد که بتوانید با دستورات مختلف حساب کاربری خود را مدیریت کنید.
+همچنین دستور `auth` امکان **لیست** حساب‌ها، **ورود-خروج** از حساب و **سوئیچ**  بین حساب‌ها را برای شما فراهم می‌کند که توضیحات آن در ادامه خواهد آمد.
+### لاگین با مرورگر
 
-### استفاده پایه‌ای
-
-اجرای دستور `fing up` در مسیر فعلی پروژه:
-
-```bash
-$ fing up
-```
-
-### استفاده طولانی‌تر
-
-اجرای دستور `fing up` با اضافه کردن مسیر پروژه:
+با کمک دستور `fing login --browser` می‌توانید بدونه وارد کردن **ایمیل** و **رمز عبور** خود در **فینگ ‌CLI** لاگین کنید.
 
 ```bash
-$ fing up --path [path/to/project]
+$  fing login --browser
+✓ Session OK
+⣻ Getting Authentication
 ```
 
-### انتخاب پلتفرم
+با وارد کردن دستور بالا صفحه‌ای در مرورگر شما باز می‌شود و از شما خواسته می‌شود که حساب کاربری خود را انتخاب نمایید.
 
-هنگام ایجاد یک برنامه جدید، فینگ CLI به طور خودکار پلتفرمی‌که از آن استفاده می‌کنید را شناسایی می‌کند و بر این اساس تنظیمات پیش فرض برنامه را ارائه می‌دهد. به عنوان مثال اگر برنامه شما `NodeJs` باشد، فینگ CLI به صورت خودکار آن را پلتفرم `node` تشخیص می‌دهد و عملیات استقرار را آغاز می‌کند. البته شما می‌توانید هنگام اجرای دستور `fing up` پلتفرم برنامه را هم مشخص کنید:
+![choose account](/images/cli-browser-choose-account.jpg)
+
+بعداز انتخاب حساب مورد نظر، به صفحه‌ای هدایت می‌شوید که با کلیک کردن بر روی گزینه‌ی **به cli دسترسی بده** به **فینگ CLI** اجازه بدهید تا به حساب کاربری شما دسترسی داشته باشد.
+
+![choose account](/images/cli-browser-access.jpg)
+
+بعداز انتخاب این گزینه، اکانت شما با موفقیت در **فینگ‌ CLI** لاگین می‌شود.
 
 ```bash
-$ fing up --platform=node
+$ fing login --browser
+✓ Session OK
+✓ Authentication OK
+Successfully logged in.
+Session saved
 ```
 
-<Notice variant="info">
-  می‌توانید بعداً تنظیمات برنامه‌ی خود را از قسمت داشبورد ویرایش کنید.
-</Notice>
+### لاگین با خط فرمان
 
-## app
+با وارد کردن دستور `fing auth login` این امکان را دارید که اکانت‌‌‌های ساخته شده خود در **سکوی ابری فینگ** را به **فینگ CLI** اضافه نمایید.
 
-با استفاده از دستور `fing app [flags]` این امکان وجود دارد که بتوانید از طریق **فینگ‌ CLI** برنامه‌ی خود را ایجاد، **remove**, **restart**, **stop**, **start** و همچنین **لاگ‌های** آن را مشاهده کنید.
+```bash
+$ fing auth login -u [email]  -p [password]
+Successfully logged in.
+```
 
-### list
+- همچنین شما این امکان را دارید که بدون استفاده از دستور `auth`، و تنها با وارد کردن دستور `fing login` در **فینگ CLI** لاگین کنید.
+
+```bash
+$ fing login -u [email]  -p [password]
+```
+
+با وارد کردن **ایمیل** و **رمز عبور** خود، وارد حساب کاربری‌تان شوید.
+
+### جابجایی در حساب‌ها
+
+با استفاده از دستور `fing auth use` امکان سوئیچ شدن بین اکانت‌‌های لاگین شده‌ی شما فراهم می‌شود. که می‌توانید با فلش کیبورد سیستم خود، حساب مورد نظر را انتخاب کنید.
+
+```bash
+$ fing auth use
+? select account  [Use arrows to move, type to filter]
+> example@gmail.com
+  my.emailname@gmail.com
+```
+
+### لسیت حساب‌ها
+
+با دستور `fing auth ls` اکانت‌‌هایی که در **فینگ CLI** لاگین کرده‌اید را می‌توانید مشاهده کرده و از فعال بودن هر یک اطلاع پیدا کنید.
+
+```bash
+$ fing auth ls
+EMAIL                        STATUS    LOGIN AT              LAST USED AT
+example@gmail.com            -         -                     about 1 hour ago
+my.emailname@gmail.com   ACTIVE    about 3 minutes ago   less than a minute ago
+```
+
+### خروج از حساب
+
+با اجرای دستور `fing auth logout` از حساب لاگین شده خود در **فینگ‌ CLI** خارج خواهید شد.
+
+```bash
+$ fing auth logout
+Logged out my.emailname@gmail.com
+```
+
+## مدیریت برنامه‌ها
+
+با استفاده از دستور `fing app [command]` این امکان برای شما فراهم می‌شود که بتوانید از طریق **فینگ‌ CLI** برنامه‌ی خود را **ایجاد**، **روشن**، **خاموش**، **حذف** و همچنین **لاگ‌های** آن را مشاهده کنید.
+
+### ساخت برنامه
+
+با استفاده از دستور `fing app create [appname]` و نام برنامه دلخواه خود، لیست **پلن‌های**  موجود برای شما نمایش داده می‌شود که شما می‌توانید از طریق دکمه فلش کیبورد خود، **پلن**‌ مناسب برنامه‌ی خود را انتخاب نمایید تا برنامه شما با موفقیت ایجاد شود.
+
+```bash
+$ fing app create myapp
+? select plan  [Use arrows to move, type to filter]
+> [ nano ]	Memory: 0.5G	CPU: 0.25	Storage: 5.0G	Price: 40,000 Tomans
+  [ micro ]	Memory: 1.0G	CPU: 0.50	Storage: 10.0G	Price: 80,000 Tomans
+ ...
+
+```
+
+### لیست برنامه‌ها
 
 با اجرای دستور `fing app ls` می‌توانید لیست برنامه‌هایی که در **سکوی ابری فینگ** ایجاد کرده‌اید را مشاهده کنید.
 
@@ -55,20 +117,7 @@ dashboard        next         running     registry.fing.ir/dashboard:se0z2on6   
 my-db            package      stop                                                  about 2 months ago
 ```
 
-### create
-
-با استفاده از دستور `fing app create [appname]` و نام برنامه دلخواه خود، لیست **پلن**‌های موجود برای شما نمایش داده می‌شود که شما می‌توانید از طریق دکمه فلش کیبورد خود، **پلن**‌ مناسب برنامه‌ی خود را انتخاب نمایید تا برنامه شما با موفقیت ایجاد شود.
-
-```bash
-$ fing app create myapp
-? select plan  [Use arrows to move, type to filter]
-> [ nano ]	Memory: 0.5G	CPU: 0.25	Storage: 5.0G	Price: 40,000 Tomans
-  [ micro ]	Memory: 1.0G	CPU: 0.50	Storage: 10.0G	Price: 80,000 Tomans
- ...
-
-```
-
-### start
+### شروع برنامه
 
 با وارد کردن دستور `fing app start [appname]`، برنامه شما استارت می‌شود.
 
@@ -78,17 +127,16 @@ $ fing app start myapp
 
 ```
 
-### stop
+### خاموش کردن برنامه
 
 با کمک دستور `fing app stop [appname]`، برنامه شما به وضعیت **stop** در خواهد آمد.
 
 ```bash
 $ fing app stop myapp
 > app 'myapp' started
-
 ```
 
-### restart
+### شروع دوباره برنامه
 
 با اجرای `fing app restart [appname]` برنامه‌ی مورد نظر شما دوباره استارت می‌شود.
 
@@ -97,17 +145,17 @@ $ fing app restart myapp
 app 'myapp' restartd
 ```
 
-### remove
+### حذف برنامه
 
 با وارد کردن دستور `fing app remove [appname]` می‌توانید برنامه خود را از طریق **فینگ CLI** حذف نمایید.
 
-```
-fing app remove myapp
+```bash
+$ fing app remove myapp
 ? Enter app name to remove (myapp): myapp
 app 'myapp' removed
 ```
 
-### logs
+### لاگ‌های برنامه
 
 دستور `fing app logs [appname]` این امکان را به شما می‌دهد که لاگ‌های برنامه‌ی خود را بصورت زنده در ترمینال‌تان مشاهده کنید.
 
@@ -141,107 +189,43 @@ $ fing app logs [myapp] --since [1h or 60m]
 $ fing app logs [myapp] --timestamps
 ```
 
-## auth
+## مدیریت استقرار برنامه‌ها
 
-شما می توانید با استفاده از دستور `fing auth` لیست اکانت‌ها خود را مشاهده کنید و ورود و خروج از حساب و همچنین بین اکانت‌‌های خود سوئیچ شوید.
+از دستور `fing up` برای استقرار برنامه‌ها استفاده می‌شود. برای اجرای آن یا باید در مسیر فعلی پروژه باشید و یا مسیر پروژه مورد نظر را به آن ارائه دهید.
 
-### list
+### استفاده پایه‌ای
 
-با دستور `fing auth ls` اکانت‌‌هایی که در **فینگ CLI** لاگین کرده‌اید را می‌توانید مشاهده کرده و از فعال بودن هر یک اطلاع پیدا کنید.
-
-```bash
-$ fing auth ls
-EMAIL                        STATUS    LOGIN AT              LAST USED AT
-example@gmail.com            -         -                     about 1 hour ago
-my.emailname@gmail.com   ACTIVE    about 3 minutes ago   less than a minute ago
-
-```
-
-### use
-
-با استفاده از دستور `fing auth use` امکان سوئیچ شدن بین اکانت‌‌های لاگین شده‌ی شما فراهم می‌شود.
+اجرای دستور `fing up` در مسیر فعلی پروژه:
 
 ```bash
-$ fing auth use
-? select account  [Use arrows to move, type to filter]
-> example@gmail.com
-  my.emailname@gmail.com
-
+$ fing up
 ```
 
-### login
+### استفاده طولانی‌تر
 
-با وارد کردن دستور `fing auth login` این امکان را دارید که اکانت‌‌‌های ساخته شده خود در **سکوی ابری فینگ** را به **فینگ CLI** اضافه نمایید.
+اجرای دستور `fing up` با اضافه کردن مسیر پروژه:
 
 ```bash
-$ fing auth login -u [email]  -p [password]
-Successfully logged in.
+$ fing up --path [path/to/project]
 ```
 
-### logout
+### انتخاب پلتفرم
 
-با اجرای دستور `fing auth logout` از حساب لاگین شده خود در **فینگ‌ CLI** خارج خواهید شد.
+هنگام ایجاد یک برنامه جدید، **فینگ CLI** به طور خودکار پلتفرمی ‌که از آن استفاده می‌کنید را شناسایی می‌کند و بر این اساس تنظیمات پیش فرض برنامه را ارائه می‌دهد. به عنوان مثال اگر برنامه شما `NodeJs` باشد، **فینگ CLI**  به صورت خودکار آن را پلتفرم `node` تشخیص می‌دهد و عملیات استقرار را آغاز می‌کند. البته شما می‌توانید هنگام اجرای دستور `fing up` پلتفرم برنامه را هم مشخص کنید:
 
 ```bash
-$ fing auth logout
-Logged out my.emailname@gmail.com
+$ fing up --platform=node
 ```
 
-## login
+<Notice variant="info">
+  می‌توانید بعداً تنظیمات برنامه‌ی خود را از قسمت <a href="https://cloud.fing.ir">داشبورد</a> ویرایش کنید.
+</Notice>
 
-دستور `fing login` به شما این امکان را می‌دهد که از طریق **فینگ CLI** به حساب فینگ خود وارد شوید.
+## راهنمای دستورات
 
-```
+دستور `fing help` تمامی دستورات و گزینه‌های **فینگ CLI**  موجود در ترمینال را لیست می‌کند. و اگر یک آرگومان دومی‌به آن اضافه شود، اطلاعات دقیق‌تری در مورد آن دستور ارائه می‌دهد.
 
-$ fing login
-
-```
-
-با وارد کردن ایمیل و رمز عبور خود، وارد حساب کاربری تان شوید.
-
-### browser
-
-با کمک دستور `fing login --browser` می‌توانید بدونه وارد کردن **ایمیل** و **رمز عبور** خود در **فینگ ‌CLI** لاگین کنید.
 
 ```bash
-$  fing login --browser
-✓ Session OK
-⣻ Getting Authentication
-```
-
-با وارد کردن دستور بالا صفحه‌ای در مرورگر شما باز می‌شود و از شما خواسته می‌شود که حساب کاربری خود را انتخاب نمایید.
-
-![choose account](/images/cli-browser-choose-account.jpg)
-
-بعداز انتخاب اکانت مورد نظر، به صفحه‌ای هدایت می‌شوید که با کلیک کردن بر روی گزینه‌ی **به cli دسترسی بده** به فینگ CLI اجازه بدهید تا به حساب کاربری شما دسترسی داشته باشد.
-
-![choose account](/images/cli-browser-access.jpg)
-
-بعداز انتخاب این گزینه، اکانت شما با موفقیت در **فینگ‌ CLI** لاگین می‌شود.
-
-```bash
-$ fing login --browser
-✓ Session OK
-✓ Authentication OK
-Successfully logged in.
-Session saved
-```
-
-شما می‌توانید با دستور `fing auth ls` لیست اکانت‌‌های لاگین شده‌ی خود را مشاهده نمایید.
-
-## help
-
-دستور `fing help` تمامی دستورات و گزینه‌های فینگ CLI موجود در ترمینال را لیست می‌کند. و اگر یک آرگومان دومی‌به آن اضافه شود، اطلاعات دقیق‌تری در مورد آن دستور ارائه می‌دهد.
-
-```
-
-$ fing help
-
-```
-
-استفاده از دستور `fing help` برای ارائه اطلاعت دقیق درباره‌ی یک دستور خاص در فینگ CLI
-
-```
-
 $ fing help [command]
 ```
