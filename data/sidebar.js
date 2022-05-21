@@ -15,6 +15,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Node', slug: '/quickstart/node' },
       { label: 'اجرای برنامه python', slug: '/quickstart/python' },
       { label: 'اجرای برنامه Go', slug: '/quickstart/golang' },
+      { label: 'اجرای برنامه Static', slug: '/quickstart/static' },
     ]
   },
 
