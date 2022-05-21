@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "yarn cache-pages && next-sitemap",
+    "prebuild": "yarn cache-pages",
+    "postbuild": "next-sitemap",
     "cache-pages": "node lib/cache-pages.js",
     "start": "next start",
     "lint": "next lint"

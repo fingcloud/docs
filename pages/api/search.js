@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js'
-import data from '.next/cached-pages.json'
+import data from 'data/cached-pages.json'
 
 const cached = new Fuse(data, {
   keys: [
