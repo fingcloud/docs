@@ -1,9 +1,8 @@
-import { Fragment, useCallback, useEffect, useMemo, useState } from 'react'
+import { Fragment, useCallback, useEffect, useState } from 'react'
 import Link from "next/link";
 import { Dialog, Transition } from '@headlessui/react'
 import { FiArrowLeft, FiChevronLeft, FiCommand, FiMenu, FiSearch } from "react-icons/fi";
 import { BsGithub, BsTwitter, BsInstagram } from 'react-icons/bs'
-import { debounce } from 'lodash';
 
 export const Navbar = () => {
   const [result, setResult] = useState([])
