@@ -39,7 +39,7 @@ export const TableOfContent = ({ headers }) => {
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        const headingIndex = headings.findIndex(item => h.getAttribute('href') === entry.target.getAttribute('href'))
+        const headingIndex = headings.findIndex(item => item.getAttribute('href') === entry.target.getAttribute('href'))
         if (headingIndex !== -1) {
           if (entry.isIntersecting && 1 <= entry.intersectionRatio) {
             headings[headingIndex].visible = true
