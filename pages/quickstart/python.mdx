@@ -13,7 +13,7 @@ import { PlatformHead, Platform } from "components/PlatformHead";
 
 در این راهنما نحوه‌ی اجرای یک برنامه **Python** به کمک پلتفرم **flask** را در **فینگ** یاد خواهیم گرفت.
 
-## برنامه helloworld
+## برنامه hello-python
 
 برای ایجاد یک برنامه **python**، فایلی با نام `server.py` ایجاد می‌کنیم و سپس کد خود را در آن قرار می‌دهیم.
 
@@ -62,7 +62,7 @@ $ python -m pip install -r requirements.txt
 ```bash
 $ export FLASK_APP=server
 $ flask run
-* Serving Flask app 'server' (lazy loading)
+ * Serving Flask app 'server' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
@@ -84,7 +84,7 @@ $ flask run
 
 ```yaml
 # fing.yaml
-app: "helloworld"
+app: "hello-python"
 platform: "falsk"
 port: 3000
 ```
@@ -95,7 +95,7 @@ port: 3000
 
 ### دستور استقرار
 
-بعد از وارد شدن در فینگ cli در مسیر اصلی پروژه‌ی خود، دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود.
+بعد از وارد شدن در **فینگ CLI**،  در مسیر اصلی پروژه‌ی خود دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود:
 
 ```bash
 $ fing up
@@ -105,4 +105,4 @@ $ fing up
 
 بعد از انجام مراحل قبلی و اولین استقرار، فینگ برای برنامه‌ی ما زیر دامنه‌ای اختصاص می‌دهد که می‌توانیم از طریق آن از صحت استقرار برنامه خود در** سرویس ابری فینگ** مطمئن شویم.
 
-زیر دامنه‌ی ما به این صورت خواهد بود: `https://helloworld.onfing.ir`
+زیر دامنه‌ی ما به این صورت خواهد بود: `https://hello-python.onfing.ir`
