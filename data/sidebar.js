@@ -44,7 +44,7 @@ export const sidebarItems = [
     ]
   },
   {
-    title: 'دیتابیس',
+    title: 'دیتابیس‌ها',
     pages: [
       { label: 'MySQL', slug: '/database/mysql' },
       { label: 'PostgreSQL', slug: '/database/postgresql' },
