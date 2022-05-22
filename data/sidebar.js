@@ -17,6 +17,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Go', slug: '/quickstart/golang' },
       { label: 'اجرای برنامه Static', slug: '/quickstart/static' },
       { label: 'اجرای برنامه Next', slug: '/quickstart/next' },
+      { label: 'اجرای برنامه PHP', slug: '/quickstart/php' },
     ]
   },
 
@@ -30,7 +31,6 @@ export const sidebarItems = [
       { label: 'Static', slug: '/platform/static' },
       { label: 'React', slug: '/platform/react' },
       { label: 'VueJs', slug: '/platform/vue' },
-      { label: 'NextJs', slug: '/platform/next' },
       { label: 'Vite', slug: '/platform/vite' },
       { label: 'NuxtJs', slug: '/platform/nuxt' },
       { label: 'NestJs', slug: '/platform/nest' },
