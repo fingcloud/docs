@@ -18,6 +18,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Static', slug: '/quickstart/static' },
       { label: 'اجرای برنامه PHP', slug: '/quickstart/php' },
       { label: 'اجرای برنامه Next', slug: '/quickstart/next' },
+      { label: 'اجرای برنامه Vue', slug: '/quickstart/vue' },
       { label: 'اجرای برنامه Nuxt', slug: '/quickstart/nuxt' },
       { label: 'اجرایر برنامه Nest', slug: '/quickstart/nest' },
     ]
