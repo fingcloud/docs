@@ -19,6 +19,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه PHP', slug: '/quickstart/php' },
       { label: 'اجرای برنامه Next', slug: '/quickstart/next' },
       { label: 'اجرای برنامه Nuxt', slug: '/quickstart/nuxt' },
+      { label: 'اجرایر برنامه Nest', slug: '/quickstart/nest' },
     ]
   },
 
@@ -33,8 +34,6 @@ export const sidebarItems = [
       { label: 'React', slug: '/platform/react' },
       { label: 'VueJs', slug: '/platform/vue' },
       { label: 'Vite', slug: '/platform/vite' },
-      { label: 'NuxtJs', slug: '/platform/nuxt' },
-      { label: 'NestJs', slug: '/platform/nest' },
       { label: 'Angular', slug: '/platform/angular' },
       { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
