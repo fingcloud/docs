@@ -25,6 +25,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Nuxt', slug: '/quickstart/nuxt' },
       { label: 'اجرای برنامه Nest', slug: '/quickstart/nest' },
       { label: 'اجرای برنامه Vite', slug: '/quickstart/vite' },
+      { label: 'اجرای برنامه Docusaurus-2', slug: '/quickstart/docusaurus-2' },
     ]
   },
 
