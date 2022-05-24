@@ -35,7 +35,6 @@ export const sidebarItems = [
       { label: 'Php', slug: '/platform/php' },
       { label: 'Static', slug: '/platform/static' },
       { label: 'Vite', slug: '/platform/vite' },
-      { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
       { label: 'Flask', slug: '/platform/flask' },
       { label: 'Django', slug: '/platform/django' },
