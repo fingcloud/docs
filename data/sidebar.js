@@ -20,6 +20,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه React', slug: '/quickstart/react' },
       { label: 'اجرای برنامه Next', slug: '/quickstart/next' },
       { label: 'اجرای برنامه Vue', slug: '/quickstart/vue' },
+      { label: 'اجرای برنامه Django', slug: '/quickstart/django' },
       { label: 'اجرای برنامه Angular', slug: '/quickstart/angular' },
       { label: 'اجرای برنامه Flask', slug: '/quickstart/flask' },
       { label: 'اجرای برنامه Gatsby', slug: '/quickstart/gatsby' },
