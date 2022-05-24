@@ -24,6 +24,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Gatsby', slug: '/quickstart/gatsby' },
       { label: 'اجرای برنامه Nuxt', slug: '/quickstart/nuxt' },
       { label: 'اجرای برنامه Nest', slug: '/quickstart/nest' },
+      { label: 'اجرای برنامه Vite', slug: '/quickstart/vite' },
     ]
   },
 
@@ -35,7 +36,6 @@ export const sidebarItems = [
       { label: 'Golang', slug: '/platform/golang' },
       { label: 'Php', slug: '/platform/php' },
       { label: 'Static', slug: '/platform/static' },
-      { label: 'Vite', slug: '/platform/vite' },
       { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
       { label: 'Flask', slug: '/platform/flask' },
       { label: 'Django', slug: '/platform/django' },
