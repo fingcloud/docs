@@ -1,0 +1,115 @@
+---
+title: Angular
+description: چگونه می‌توانیم برنامه‌های (Angular) را بر روی سکوی ابری فینگ مستقر(deploy) کنیم؟
+---
+
+import { PlatformHead, Platform } from "components/PlatformHead";
+
+<Platform>
+  <PlatformHead
+    title="برنامه‌های Angular"
+    icon="angularjs/angularjs-original.svg"
+  />
+</Platform>
+
+# ساخت، استقرار و اجرای یک برنامه Angular
+
+در این راهنما نحوه‌ی اجرای یک برنامه **Angular** را در **فینگ** یاد خواهیم گرفت.
+
+**Angular** از **Node.js** برای بخش بزرگی از محیط ساخت خود استفاده می کند. بنابراین برای شروع کار با **انگولار**، باید Node.js را روی سیستم خود نصب داشته باشیم.
+
+## برنامه hello-angular
+
+برای ایجاد اولین پروژه‌ی **انگولار** خود می‌توانیم از **Angular CLI** با دستور نصب زیر استفاده کنیم:
+
+```bash
+$ npm install -g @angular/cli
+```
+
+**رابط خط فرمان (CLI) انگولار** فرآیند توسعه برنامه‌های **angular** و همچنین بخش bootstrap برنامه را برای ما آسان می‌کند.
+
+اکنون برای ایجاد یک پروژه جدید با **Angular-CLI**، دستور زیر را در کنسول خود اجرا می‌کنیم:
+
+```bash
+$ ng new hello-angular
+```
+
+بعد از اجرای این دستور، برنامه‌ی **انگولار** ما با اسم `hello-angular` ایجاد شده و تمام **وابستگی‌های** پیش فرض آن نیز با موفقیت نصب می‌شوند.
+
+```json
+{
+  "name": "hello-angular",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "dependencies": {
+    "@angular/animations": "~13.3.0",
+    "@angular/compiler": "~13.3.0",
+    ...
+  }
+}
+```
+
+### اجرای برنامه
+
+برای اجرای برنامه‌ی خود، دستور `ng serve` را در مسیر پروژه وارد می‌کنیم:
+
+```bash
+$ ng serve
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   1.70 MB |
+polyfills.js          | polyfills     | 294.80 kB |
+styles.css, styles.js | styles        | 173.23 kB |
+main.js               | main          |  47.68 kB |
+runtime.js            | runtime       |   6.52 kB |
+
+Build at: 2022-05-24T04:20:30.693Z - Hash: d8fdbddfef9c9aaa - Time: 15967ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+✔ Compiled successfully.
+```
+
+اکنون `http://localhost:4200` را در مرورگر خود باز کرده تا مطمئن شویم برنامه **angular** ما کار می‌کند.
+
+- بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
+
+## استقرار برنامه angular در فینگ
+
+برای استقرار برنامه‌ی خود بر روی سکوی ابری فینگ، باید یک برنامه را ایجاد کنید. برای اطلاع از چگونگی ایجاد آن، به بخش [ساخت برنامه در فینگ](/quickstart/create-app) مراجعه کنید.
+
+### ایجاد فایل fing.yaml
+
+در ریشه اصلی پروژه خود، فایلی را با نام `fing.yaml` ایجاد می‌کنیم و اطلاعات پایه‌ای برنامه‌ی خود را در آن قرار می‌دهیم. که می‌توان نام برنامه، پلتفرمی که از آن استفاده می‌کنیم و همچنین پورتی که برنامه‌ی ما بر روی آن `listen` می‌کند را مشخص کنیم.
+
+```yaml
+# fing.yaml
+app: "hello-angular"
+platform: "angular"
+port: 4200
+```
+
+### نصب فینگ cli و لاگین در آن
+
+برنامه‌ی **angular** ما آماده‌ی استقرار بر روی **سکوی ابری فینگ** می‌باشد و این بدین معناست که ما برای مدیریت برنامه‌های خود به **فینگ cli** نیاز داریم. اگر هنوز آن را نصب نکرده‌اید به [راهنمای نصب](/quickstart/installation) ما بروید و بعد از نصب، در آن [لاگین](/quickstart/login) کنید.
+
+### دستور استقرار
+
+بعد از لاگین در **فینگ CLI**، در مسیر اصلی پروژه‌ی خود دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود:
+
+```bash
+$ fing up
+```
+
+### مشاهده خروجی
+
+بعد از انجام مراحل قبلی و اولین استقرار، فینگ برای برنامه‌ی ما زیر دامنه‌ای اختصاص می‌دهد که می‌توانیم از طریق آن از صحت استقرار برنامه خود در ** سرویس ابری فینگ** مطمئن شویم.
+
+زیر دامنه‌ی ما به این صورت خواهد بود: `https://hello-angular.onfing.ir`
