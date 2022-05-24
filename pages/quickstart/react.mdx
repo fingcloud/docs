@@ -1,0 +1,107 @@
+---
+title: React
+description: چگونه برنامه react خود را بر روی سکوی ابری فینگ مستقر(deploy) کنیم؟
+---
+
+import { PlatformHead, Platform } from "components/PlatformHead";
+
+<Platform>
+  <PlatformHead title="برنامه‌های react" icon="react/react-original.svg" />
+</Platform>
+
+# ساخت، استقرار و اجرای یک برنامه React
+
+در این راهنما نحوه‌ی اجرای یک برنامه **React** را در **فینگ** یاد خواهیم گرفت.
+
+## برنامه hello-react
+
+برای ایجاد یک برنامه‌ی **React**، یکی از دستورهای زیر را اجرا میکنیم:
+
+```bash
+$ npx create-react-app hello-react
+# or
+$ npm init react-app hello-react
+# or
+$ yarn create react-app hello-react
+```
+
+با اجرای هر یک از این دستورات، پوشه‌ای به نام `hello-react`  در مسیر فعلی ما ایجاد می شود. که ساختار اولیه‌ی پروژه‌ی ما را در آن ایجاد می کند و **وابستگی‌های** پیش فرض را نصب می کند:
+
+```
+hello-react
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── serviceWorker.js
+    └── setupTests.js
+```
+
+### اجرای برنامه
+
+با توجه به هر یک از دستورهایی که به وسیله‌ی آن پروژه **ریکت** خود را ایجاد کرده‌ایم، طبق آن دستور یعنی 
+`npm start` یا `yarn start` برنامه را اجرا می‌کنیم.
+
+```bash
+$ npm start
+> hello-react@0.1.0 start
+> react-scripts start
+
+Compiled successfully!
+
+You can now view hello-react in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.6:3000
+```
+
+اکنون `http://localhost:3000` را در مرورگر خود باز کرده تا مطمئن شویم برنامه **react** ما کار می‌کند.
+
+- بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
+
+## استقرار برنامه react در فینگ
+
+برای استقرار برنامه‌ی خود بر روی سکوی ابری فینگ، باید یک برنامه را ایجاد کنید. برای اطلاع از چگونگی ایجاد آن، به بخش [ساخت برنامه در فینگ](/quickstart/create-app) مراجعه کنید.
+
+### ایجاد فایل fing.yaml
+
+در ریشه اصلی پروژه خود، فایلی را با نام `fing.yaml` ایجاد می‌کنیم و اطلاعات پایه‌ای برنامه‌ی خود را در آن قرار می‌دهیم. که می‌توان نام برنامه، پلتفرمی که از آن استفاده می‌کنیم و همچنین پورتی که برنامه‌ی ما بر روی آن `listen` می‌کند را مشخص کنیم.
+
+```yaml
+# fing.yaml
+app: "hello-react"
+platform: "react"
+port: 80
+```
+
+### نصب فینگ cli و لاگین در آن
+
+برنامه‌ی **react** ما آماده‌ی استقرار بر روی **سکوی ابری فینگ** می‌باشد و این بدین معناست که ما برای مدیریت برنامه‌های خود به **فینگ cli** نیاز داریم. اگر هنوز آن را نصب نکرده‌اید به [راهنمای نصب](/quickstart/installation) ما بروید و بعد از نصب، در آن [لاگین](/quickstart/login) کنید.
+
+### دستور استقرار
+
+بعد از لاگین در **فینگ CLI**، در مسیر اصلی پروژه‌ی خود دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود:
+
+```bash
+$ fing up
+```
+
+### مشاهده خروجی
+
+بعد از انجام مراحل قبلی و اولین استقرار، فینگ برای برنامه‌ی ما زیر دامنه‌ای اختصاص می‌دهد که می‌توانیم از طریق آن از صحت استقرار برنامه خود در ** سرویس ابری فینگ** مطمئن شویم.
+
+زیر دامنه‌ی ما به این صورت خواهد بود: `https://hello-react.onfing.ir`

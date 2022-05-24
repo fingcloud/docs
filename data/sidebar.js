@@ -15,6 +15,14 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Node', slug: '/quickstart/node' },
       { label: 'اجرای برنامه python', slug: '/quickstart/python' },
       { label: 'اجرای برنامه Go', slug: '/quickstart/golang' },
+      { label: 'اجرای برنامه Static', slug: '/quickstart/static' },
+      { label: 'اجرای برنامه PHP', slug: '/quickstart/php' },
+      { label: 'اجرای برنامه React', slug: '/quickstart/react' },
+      { label: 'اجرای برنامه Next', slug: '/quickstart/next' },
+      { label: 'اجرای برنامه Vue', slug: '/quickstart/vue' },
+      { label: 'اجرای برنامه Angular', slug: '/quickstart/angular' },
+      { label: 'اجرای برنامه Nuxt', slug: '/quickstart/nuxt' },
+      { label: 'اجرایر برنامه Nest', slug: '/quickstart/nest' },
     ]
   },
 
@@ -26,13 +34,7 @@ export const sidebarItems = [
       { label: 'Golang', slug: '/platform/golang' },
       { label: 'Php', slug: '/platform/php' },
       { label: 'Static', slug: '/platform/static' },
-      { label: 'React', slug: '/platform/react' },
-      { label: 'VueJs', slug: '/platform/vue' },
-      { label: 'NextJs', slug: '/platform/next' },
       { label: 'Vite', slug: '/platform/vite' },
-      { label: 'NuxtJs', slug: '/platform/nuxt' },
-      { label: 'NestJs', slug: '/platform/nest' },
-      { label: 'Angular', slug: '/platform/angular' },
       { label: 'Gatsby', slug: '/platform/gatsby' },
       { label: 'Docusaurus-2', slug: '/platform/docusaurus-2' },
       { label: 'Flask', slug: '/platform/flask' },
@@ -43,7 +45,7 @@ export const sidebarItems = [
     ]
   },
   {
-    title: 'دیتابیس',
+    title: 'دیتابیس‌ها',
     pages: [
       { label: 'MySQL', slug: '/database/mysql' },
       { label: 'PostgreSQL', slug: '/database/postgresql' },

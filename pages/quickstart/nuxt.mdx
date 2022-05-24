@@ -1,0 +1,117 @@
+---
+title: Nuxt
+description: چگونه می‌توانیم برنامه‌های (NuxtJs) را بر روی سکوی ابری فینگ مستقر(deploy) کنیم؟
+---
+
+import { PlatformHead, Platform } from "components/PlatformHead";
+
+<Platform>
+  <PlatformHead title="برنامه‌های Nuxt.js" icon="nuxtjs/nuxtjs-original.svg" />
+</Platform>
+
+# ساخت، استقرار و اجرای یک برنامه Nuxt
+
+در این راهنما نحوه‌ی اجرای یک برنامه **Nuxt** را در **فینگ** یاد خواهیم گرفت.
+
+**Nuxt** یک فریمورک پیشرو و مبتنی بر **Vue.js** می‌باشد که برای ایجاد برنامه‌های کاربردی تحت وب استفاده می‌شود.
+
+## برنامه hello-nuxt
+
+با اجرای یکی از دستورهای زیر، یک برنامه **Nuxt** برای خود ایجاد می‌کنیم:
+
+```bash
+$ npx create-nuxt-app hello-nuxt
+# or
+$ yarn create nuxt-app hello-nuxt
+```
+
+با اجرای این دستور، **وابستگی‌ها** و **تنظیمات** پیش فرض آن به پروژه اضافه می‌گردد.
+
+```json
+// package.json
+{
+  "name": "hello-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {}
+}
+```
+
+- می‌توان زمان ساخت برنامه، زبان آن را بین `JavaScript` و یا `TypeScript` انتخاب کرد.
+
+
+- با اجرا کردن دستور ساخت، یک برنامه‌ی **nuxt** برای ما ایجاد خواهد شد.
+
+### اجرای برنامه
+
+برای اجرای برنامه دستور `npm run dev` و یا `yarn dev` را با توجه به دستوری که به‌وسیله آن پروژه **ناکست** خود را ایجاد کرده‌ایم، اجرا می‌کنیم.
+
+```bash
+$ yarn dev
+ℹ Preparing project for development                                                                                                  14:23:51
+ℹ Initial build may take a while                                                                                                     14:23:51
+ℹ Discovered Components: .nuxt/components/readme.md                                                                                  14:23:51
+✔ Builder initialized                                                                                                                14:23:51
+✔ Nuxt files generated                                                                                                               14:23:51
+
+✔ Client
+  Compiled successfully in 10.36s
+
+✔ Server
+  Compiled successfully in 9.63s
+
+ℹ Waiting for file changes                                                                                                           14:24:03
+ℹ Memory usage: 142 MB (RSS: 219 MB)                                                                                                 14:24:03
+ℹ Listening on: http://localhost:3000/
+```
+
+اکنون `http://localhost:3000` را در مرورگر خود باز کرده تا مطمئن شویم برنامه **nuxt** ما کار می‌کند.
+
+- بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
+
+## استقرار برنامه nuxt در فینگ
+
+برای استقرار برنامه‌ی خود بر روی سکوی ابری فینگ، باید یک برنامه را ایجاد کنید. برای اطلاع از چگونگی ایجاد آن، به بخش [ساخت برنامه در فینگ](/quickstart/create-app) مراجعه کنید.
+
+### ایجاد فایل fing.yaml
+
+در ریشه اصلی پروژه خود، فایلی را با نام `fing.yaml` ایجاد می‌کنیم و اطلاعات پایه‌ای برنامه‌ی خود را در آن قرار می‌دهیم. که می‌توان نام برنامه، پلتفرمی که از آن استفاده می‌کنیم و همچنین پورتی که برنامه‌ی ما بر روی آن `listen` می‌کند را مشخص کنیم.
+
+```yaml
+# fing.yaml
+app: "hello-nuxt"
+platform: "nuxt"
+port: 3000
+```
+
+### نصب فینگ cli و لاگین در آن
+
+برنامه‌ی **nuxt** ما آماده‌ی استقرار بر روی **سکوی ابری فینگ** می‌باشد و این بدین معناست که ما برای مدیریت برنامه‌های خود به **فینگ cli** نیاز داریم. اگر هنوز آن را نصب نکرده‌اید به [راهنمای نصب](/quickstart/installation) ما بروید و بعد از نصب، در آن [لاگین](/quickstart/login) کنید.
+
+### دستور استقرار
+
+بعد از لاگین در **فینگ CLI**، در مسیر اصلی پروژه‌ی خود دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود:
+
+```bash
+$ fing up
+```
+
+### مشاهده خروجی
+
+بعد از انجام مراحل قبلی و اولین استقرار، فینگ برای برنامه‌ی ما زیر دامنه‌ای اختصاص می‌دهد که می‌توانیم از طریق آن از صحت استقرار برنامه خود در ** سرویس ابری فینگ** مطمئن شویم.
+
+زیر دامنه‌ی ما به این صورت خواهد بود: `https://hello-nuxt.onfing.ir`

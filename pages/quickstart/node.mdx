@@ -13,14 +13,14 @@ import { PlatformHead, Platform } from "components/PlatformHead";
 
 در این راهنما نحوه‌ی اجرای یک برنامه **Node** را در **فینگ** یاد خواهیم گرفت.
 
-## برنامه helloworld
+## برنامه hello-node
 
 برای ایجاد یک برنامه **node** ابتدا باید دستور `npm init` و یا `yarn init` را اجرا کرده تا تنظیمات اولیه‌ی نود را داشته باشیم.
 
 ```javascript
 // package.json
 {
-  "name": "helloworld",
+  "name": "hello-node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -52,7 +52,7 @@ app.get(["/", "/:name"], (req, res) => {
 });
 
 app.listen(port, () =>
-  console.log(`HelloWorld app listening on port ${port}!`)
+  console.log(`Hello Node app listening on port ${port}!`)
 );
 ```
 
@@ -63,7 +63,7 @@ app.listen(port, () =>
 ```bash
 $ node index.js
 
-HelloWorld app listening on port 3000!
+Hello Node app listening on port 3000!
 ```
 
 اکنون `localhost:3000` را در مرورگر خود باز کرده تا مطمئن شویم برنامه **node** ما کار می‌کند.
@@ -80,7 +80,7 @@ HelloWorld app listening on port 3000!
 
 ```yaml
 # fing.yaml
-app: "helloworld"
+app: "hello-node"
 platform: "node"
 port: 3000
 ```
@@ -91,7 +91,7 @@ port: 3000
 
 ### دستور استقرار
 
-بعد از وارد شدن در فینگ cli در مسیر اصلی پروژه‌ی خود، دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود.
+بعد از وارد شدن در **فینگ CLI**، در مسیر اصلی پروژه‌ی خود دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود:
 
 ```bash
 $ fing up
@@ -99,6 +99,6 @@ $ fing up
 
 ### مشاهده خروجی
 
-بعد از انجام مراحل قبلی و اولین استقرار، فینگ برای برنامه‌ی ما زیر دامنه‌ای اختصاص می‌دهد که می‌توانیم از طریق آن از صحت استقرار برنامه خود در سرویس **فینگ** مطمئن شویم.
+بعد از انجام مراحل قبلی و اولین استقرار، فینگ برای برنامه‌ی ما زیر دامنه‌ای اختصاص می‌دهد که می‌توانیم از طریق آن از صحت استقرار برنامه خود در ** سرویس ابری فینگ** مطمئن شویم.
 
-زیر دامنه‌ی ما به این صورت خواهد بود: `https://helloworld.onfing.ir`
+زیر دامنه‌ی ما به این صورت خواهد بود: `https://hello-node.onfing.ir`
