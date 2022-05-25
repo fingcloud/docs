@@ -39,7 +39,6 @@ export const sidebarItems = [
       { label: 'Golang', slug: '/platform/golang' },
       { label: 'Php', slug: '/platform/php' },
       { label: 'Static', slug: '/platform/static' },
-      { label: 'Laravel', slug: '/platform/laravel' },
       { label: 'Docker', slug: '/platform/docker' },
       { label: 'Dotnetcore', slug: '/platform/dotnetcore' },
     ]
