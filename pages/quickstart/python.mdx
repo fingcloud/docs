@@ -11,66 +11,28 @@ import { PlatformHead, Platform } from "components/PlatformHead";
 
 # ساخت، استقرار و اجرای یک برنامه Python
 
-در این راهنما نحوه‌ی اجرای یک برنامه **Python** به کمک پلتفرم **flask** را در **فینگ** یاد خواهیم گرفت.
+در این راهنما نحوه‌ی اجرای یک برنامه **Python** ساده در **فینگ** را یاد خواهیم گرفت.
 
 ## برنامه hello-python
 
-برای ایجاد یک برنامه **python**، فایلی با نام `server.py` ایجاد می‌کنیم و سپس کد خود را در آن قرار می‌دهیم.
+برای ایجاد یک برنامه **python**، فایلی با نام `app.py` ایجاد می‌کنیم و سپس کد خود را در آن قرار می‌دهیم.
 
 ```py
-# server.py
-from flask import Flask, render_template
+# app.py
+def hello(name):
+  return print(f'Hello, {name}!')
 
-app = Flask(__name__)
-
-@app.route('/')
-@app.route('/<name>')
-def hello(name=None):
-    return render_template('hello.html', name=name)
+hello("Python")
 ```
-
-**Flask** برای مسیریابی درخواست به یک تابع `hello` تنظیم شده است که به نوبه خود یک مقدار نام (برگرفته از مسیر درخواست ها) را به یک تابع برای ارائه یک الگو ارسال می کند. این الگو در پوشه‌ی `templates` با نام `hello.html` قرار دارد.
-
-```html
-<!-- hello.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head> </head>
-  <body>
-    <h1>Hello from Fing</h1>
-    {% if name %}
-    <h2>and hello to {{name}}</h2>
-    {% endif %}
-  </body>
-</html>
-```
-
-- شما باید خود **Flask** را نصب کنید یا حداقل محیط‌های مجازی را همانطور که در [راهنمای نصب فلاسک](https://flask.palletsprojects.com/en/1.1.x/installation/#virtual-environments) توصیه شده است راه‌اندازی کنید.
-
-هنگامی که محیط مجازی فعال شد، دستور زیر را اجرا می‌کنیم:
-
-```bash
-$ python -m pip install -r requirements.txt
-```
-
-با اجرای این دستور، فلاسک و سایر پکیج‌های مورد نیاز بارگیری می‌شوند.
 
 ### اجرای برنامه
 
-برنامه‌های **Flask** با دستور `flask run` اجرا می شوند، اما قبل از انجام این کار، باید یک متغیر محیطی `FLASK_APP` تنظیم کنیم تا بگوییم کدام برنامه را می خواهیم اجرا کنیم.
+برای اجرای یک برنامه **پایتون**، دستور زیر را اجرا می‌کنیم:
 
 ```bash
-$ export FLASK_APP=server
-$ flask run
- * Serving Flask app 'server' (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+$ python app.py
+Hello, Python
 ```
-
-این دستور، برنامه `server` ما را اجرا می‌کند. که می‌توانیم در مرورگر خود به `http://localhost:5000` متصل شویم.
 
 - بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
 
@@ -85,17 +47,17 @@ $ flask run
 ```yaml
 # fing.yaml
 app: "hello-python"
-platform: "falsk"
+platform: "python"
 port: 3000
 ```
 
 ### نصب فینگ cli و لاگین در آن
 
-برنامه‌ی **falsk** ما آماده‌ی استقرار بر روی **سکوی ابری فینگ** می‌باشد و این بدین معناست که ما برای مدیریت برنامه‌های خود به **فینگ cli** نیاز داریم. اگر هنوز آن را نصب نکرده‌اید به [راهنمای نصب](/quickstart/installation) ما بروید و بعد از نصب، در آن [لاگین](/quickstart/login) کنید.
+برنامه‌ی **python** ما آماده‌ی استقرار بر روی **سکوی ابری فینگ** می‌باشد و این بدین معناست که ما برای مدیریت برنامه‌های خود به **فینگ cli** نیاز داریم. اگر هنوز آن را نصب نکرده‌اید به [راهنمای نصب](/quickstart/installation) ما بروید و بعد از نصب، در آن [لاگین](/quickstart/login) کنید.
 
 ### دستور استقرار
 
-بعد از وارد شدن در **فینگ CLI**،  در مسیر اصلی پروژه‌ی خود دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود:
+بعد از وارد شدن در **فینگ CLI**، در مسیر اصلی پروژه‌ی خود دستور زیر را وارد می‌کنیم تا اولین استقرار انجام شود:
 
 ```bash
 $ fing up
