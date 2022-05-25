@@ -10,7 +10,7 @@ export const sidebarItems = [
     title: 'راهنمای شروع سریع',
     pages: [
       { label: 'نصب فینگ', slug: '/quickstart/installation' },
-      { label: 'لاگین در فینگ', slug: '/quickstart/login' },
+      { label: 'ورود به فینگ', slug: '/quickstart/login' },
       { label: 'ساخت برنامه در فینگ', slug: '/quickstart/create-app' },
       { label: 'اجرای برنامه Node', slug: '/quickstart/node', icon: 'nodejs/nodejs-original.svg' },
       { label: 'اجرای برنامه Angular', slug: '/quickstart/angular', icon: 'angularjs/angularjs-original.svg' },
