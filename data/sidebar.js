@@ -53,7 +53,7 @@ export const sidebarItems = [
     ]
   },
   {
-    title: 'سرویس‌ها',
+    title: 'برنامه‌های آماده',
     pages: [
       { label: 'Gitea', slug: '/service/gitea', icon: "gitea/gitea-original.svg" },
       { label: 'Minio', slug: '/service/minio', icon: "minio/minio-original.png" },
