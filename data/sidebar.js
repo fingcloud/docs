@@ -70,6 +70,7 @@ export const sidebarItems = [
       { label: 'دیسک‌ها', slug: '/references/disks' },
       { label: 'دستورات', slug: '/references/commands' },
       { label: 'فینگ API', slug: '/references/fing-api' },
+      { label: 'استقرار از Github', slug: '/references/github' },
     ]
   },
 ]
