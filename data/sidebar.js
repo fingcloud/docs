@@ -71,6 +71,7 @@ export const sidebarItems = [
       { label: 'دستورات', slug: '/references/commands' },
       { label: 'فینگ API', slug: '/references/fing-api' },
       { label: 'استقرار از Github', slug: '/references/github' },
+      { label: 'استقرار از فایل zip', slug: '/references/upload' },
     ]
   },
 ]
