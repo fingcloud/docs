@@ -66,6 +66,7 @@ export const sidebarItems = [
       { label: 'استقرارها', slug: '/references/deployments' },
       { label: 'دامنه‌ها', slug: '/references/domains' },
       { label: 'متغیرها', slug: '/references/environment-variables' },
+      { label: 'ایمیل‌ها', slug: '/references/mails' },
       { label: 'دیسک‌ها', slug: '/references/disks' },
       { label: 'لاگ‌ها', slug: '/references/logs' },
       { label: 'دستورات', slug: '/references/commands' },
