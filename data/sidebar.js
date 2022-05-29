@@ -29,6 +29,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Go', slug: '/quickstart/golang', icon: 'go/go-original.svg' },
       { label: 'اجرای برنامه PHP', slug: '/quickstart/php', icon: 'php/php-original.svg' },
       { label: 'اجرای برنامه Laravel', slug: '/quickstart/laravel', icon: 'laravel/laravel-plain.svg' },
+      { label: 'اجرای برنامه NET Core.', slug: '/quickstart/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
     ]
   },
 
@@ -40,7 +41,7 @@ export const sidebarItems = [
       { label: 'Golang', slug: '/platform/golang', icon: 'go/go-original.svg' },
       { label: 'PHP', slug: '/platform/php', icon: 'php/php-original.svg' },
       { label: 'Static', slug: '/platform/static', icon: 'html5/html5-original.svg' },
-      { label: '.NET Core', slug: '/platform/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
+      { label: 'NET Core.', slug: '/platform/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
       { label: 'Docker', slug: '/platform/docker', icon: 'docker/docker-original.svg' },
     ]
   },
