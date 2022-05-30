@@ -30,6 +30,7 @@ export const sidebarItems = [
       { label: 'اجرای برنامه PHP', slug: '/quickstart/php', icon: 'php/php-original.svg' },
       { label: 'اجرای برنامه Laravel', slug: '/quickstart/laravel', icon: 'laravel/laravel-plain.svg' },
       { label: 'اجرای برنامه NET Core.', slug: '/quickstart/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
+      { label: 'اجرای برنامه Rust', slug: '/quickstart/rust', icon: 'rust/rust-plain.svg' },
     ]
   },
 
