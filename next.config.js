@@ -35,19 +35,35 @@ const withMDX = require('@next/mdx')({
 })
 
 const nextConfig = {
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/:path*',
-  //       destination: 'https://fing.ir/docs/:path*',
-  //       permanent: true,
-  //       basePath: false,
-  //       has: [
-  //         { type: 'host', value: 'docs.fing.ir' },
-  //       ]
-  //     },
-  //   ]
-  // },
+  async redirects() {
+    return [
+      {
+        source: '/cli/installation',
+        destination: '/quickstart/installation',
+        permanent: true,
+      },
+      {
+        source: '/cli/quick-start',
+        destination: '/quickstart/create-app',
+        permanent: true,
+      },
+      {
+        source: '/cli/commands',
+        destination: '/references/commands',
+        permanent: true,
+      },
+      {
+        source: '/apps/:path*',
+        destination: '/references/:path*',
+        permanent: true,
+      },
+      {
+        source: '/platform/:slug(react|vue|next|vite|nuxt|nest|angular|gastby|flask|django|docusaurus-2)',
+        destination: '/quickstart/:slug',
+        permanent: true,
+      },
+    ]
+  },
   eslint: {
     // ignoreDuringBuilds: true,
   },
