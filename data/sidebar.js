@@ -61,6 +61,7 @@ export const sidebarItems = [
       { label: 'Minio', slug: '/service/minio', icon: "minio/minio-original.png" },
       { label: 'Grafana', slug: '/service/grafana', icon:"grafana/grafana-original.svg" },
       { label: 'Meilisearch', slug: '/service/meilisearch', icon:"meilisearch/meilisearch-original.svg" },
+      { label: 'Pusher', slug: '/service/pusher', icon:"pusher/pusher-original.png" },
     ]
   },
   {
