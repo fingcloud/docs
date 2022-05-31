@@ -60,6 +60,7 @@ export const sidebarItems = [
       { label: 'Gitea', slug: '/service/gitea', icon: "gitea/gitea-original.svg" },
       { label: 'Minio', slug: '/service/minio', icon: "minio/minio-original.png" },
       { label: 'Grafana', slug: '/service/grafana', icon:"grafana/grafana-original.svg" },
+      { label: 'Meilisearch', slug: '/service/meilisearch', icon:"meilisearch/meilisearch-original.svg" },
     ]
   },
   {
