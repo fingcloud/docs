@@ -44,6 +44,7 @@ export const sidebarItems = [
       { label: 'Static', slug: '/platform/static', icon: 'html5/html5-original.svg' },
       { label: 'NET Core.', slug: '/platform/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
       { label: 'Docker', slug: '/platform/docker', icon: 'docker/docker-original.svg' },
+      { label: 'Rust', slug: '/platform/rust', icon: 'rust/rust-plain.svg' },
     ]
   },
   {
