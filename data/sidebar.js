@@ -29,6 +29,8 @@ export const sidebarItems = [
       { label: 'اجرای برنامه Go', slug: '/quickstart/golang', icon: 'go/go-original.svg' },
       { label: 'اجرای برنامه PHP', slug: '/quickstart/php', icon: 'php/php-original.svg' },
       { label: 'اجرای برنامه Laravel', slug: '/quickstart/laravel', icon: 'laravel/laravel-plain.svg' },
+      { label: 'اجرای برنامه NET Core.', slug: '/quickstart/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
+      { label: 'اجرای برنامه Rust', slug: '/quickstart/rust', icon: 'rust/rust-plain.svg' },
     ]
   },
 
@@ -40,8 +42,9 @@ export const sidebarItems = [
       { label: 'Golang', slug: '/platform/golang', icon: 'go/go-original.svg' },
       { label: 'PHP', slug: '/platform/php', icon: 'php/php-original.svg' },
       { label: 'Static', slug: '/platform/static', icon: 'html5/html5-original.svg' },
-      { label: '.NET Core', slug: '/platform/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
+      { label: 'NET Core.', slug: '/platform/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
       { label: 'Docker', slug: '/platform/docker', icon: 'docker/docker-original.svg' },
+      { label: 'Rust', slug: '/platform/rust', icon: 'rust/rust-plain.svg' },
     ]
   },
   {
@@ -57,6 +60,10 @@ export const sidebarItems = [
     pages: [
       { label: 'Gitea', slug: '/service/gitea', icon: "gitea/gitea-original.svg" },
       { label: 'Minio', slug: '/service/minio', icon: "minio/minio-original.png" },
+      { label: 'Grafana', slug: '/service/grafana', icon:"grafana/grafana-original.svg" },
+      { label: 'Meilisearch', slug: '/service/meilisearch', icon:"meilisearch/meilisearch-original.svg" },
+      { label: 'Pusher', slug: '/service/pusher', icon:"pusher/pusher-original.png" },
+      { label: 'Metabase', slug: '/service/metabase', icon:"metabase/metabase-original.svg" },
     ]
   },
   {
@@ -73,6 +80,7 @@ export const sidebarItems = [
       { label: 'فینگ API', slug: '/references/fing-api' },
       { label: 'استقرار از Github', slug: '/references/github' },
       { label: 'استقرار از فایل zip', slug: '/references/upload' },
+      { label: 'Procfile', slug: '/references/procfile' },
     ]
   },
 ]
