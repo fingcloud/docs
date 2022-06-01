@@ -62,6 +62,7 @@ export const sidebarItems = [
       { label: 'Grafana', slug: '/service/grafana', icon:"grafana/grafana-original.svg" },
       { label: 'Meilisearch', slug: '/service/meilisearch', icon:"meilisearch/meilisearch-original.svg" },
       { label: 'Pusher', slug: '/service/pusher', icon:"pusher/pusher-original.png" },
+      { label: 'Metabase', slug: '/service/metabase', icon:"metabase/metabase-original.svg" },
     ]
   },
   {
