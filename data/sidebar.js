@@ -79,6 +79,7 @@ export const sidebarItems = [
       { label: 'فینگ API', slug: '/references/fing-api' },
       { label: 'استقرار از Github', slug: '/references/github' },
       { label: 'استقرار از فایل zip', slug: '/references/upload' },
+      { label: 'Procfile', slug: '/references/procfile' },
     ]
   },
 ]
