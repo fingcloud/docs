@@ -57,8 +57,23 @@ hello-rust
 
 ```javascript
 // main.rs
-fn main() {
-    println!("Hello, Rust!");
+use actix_web::{get, web, App, HttpServer, Responder};
+
+#[get("/hello/{name}")]
+async fn greet(name: web::Path<String>) -> impl Responder {
+    format!("Hello {name}!")
+}
+
+#[actix_web::main] // or #[tokio::main]
+async fn main() -> std::io::Result<()> {
+    HttpServer::new(|| {
+        App::new()
+            .route("/hello", web::get().to(|| async { "Hello Rust!" }))
+            .service(greet)
+    })
+    .bind(("127.0.0.1", 8080))?
+    .run()
+    .await
 }
 ```
 
@@ -71,8 +86,9 @@ $ cargo run
    Compiling hello-rust v0.1.0 (/Users/ali/hello-rust)
     Finished dev [unoptimized + debuginfo] target(s) in 6.00s
      Running `target/debug/hello-rust`
-Hello, Rust!
+127.0.0.1:8080
 ```
+اکنون `http://localhost:8080` را در مرورگر خود باز کرده تا مطمئن شویم برنامه **rust** ما کار می‌کند.
 
 - بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
 

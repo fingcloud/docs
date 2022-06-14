@@ -43,8 +43,8 @@ export const sidebarItems = [
       { label: 'PHP', slug: '/platform/php', icon: 'php/php-original.svg' },
       { label: 'Static', slug: '/platform/static', icon: 'html5/html5-original.svg' },
       { label: 'NET Core.', slug: '/platform/dotnetcore', icon: 'dotnetcore/dotnetcore-original.svg' },
-      { label: 'Docker', slug: '/platform/docker', icon: 'docker/docker-original.svg' },
       { label: 'Rust', slug: '/platform/rust', icon: 'rust/rust-plain.svg' },
+      { label: 'Docker', slug: '/platform/docker', icon: 'docker/docker-original.svg' },
     ]
   },
   {

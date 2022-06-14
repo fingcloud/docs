@@ -36,9 +36,15 @@ $ dotnet new console -o hello-dotnetcore -f net6.0
 
 ```javascript
 // Program.cs
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("The current time is " + DateTime.Now);
+var builder = WebApplication.CreateBuilder();
+builder.WebHost.ConfigureKestrel(o => o.AddServerHeader = false);
+builder.Logging.ClearProviders();
+
+var app = builder.Build();
+
+app.MapGet("/", () => "Hello, World!");
+
+app.Run();
 ```
 
 ## اجرای برنامه
@@ -47,11 +53,12 @@ Console.WriteLine("The current time is " + DateTime.Now);
 
 ```bash
 $ dotnet run
-Hello, World!
 The current time is 5/29/2022 9:10:14 AM
 ```
 
-بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
+اکنون `http://localhost:8080` را در مرورگر خود باز کرده تا مطمئن شویم برنامه **dotnetcore** ما کار می‌کند.
+
+- بعداز اجرای موفقیت آمیز برنامه، اکنون می‌توانیم آن را جهت استقرار بر روی **سرویس ابری فینگ** آماده کنیم.
 
 ## استقرار برنامه dotnetcore در فینگ
 
